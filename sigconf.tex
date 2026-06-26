@@ -249,112 +249,126 @@ a unified framework.
 
 \subsection{Research Conclusions}
 
-The background analysis yields eight design conclusions that inform PP:
+Across 22 reviewed applications, existing ADHD task-management tools rely
+primarily on mandatory reminders, countdown timers, and behavioural correction,
+with only isolated modules---visual mapping, meditation, and random creative
+prompts---aligned with positive ADHD characteristics~\cite{pasarelu2020}. None
+of the identified applications integrates strength-aligned elements within a
+coherent, theoretically grounded framework; each tool remains anchored in a
+deficit-correction posture that reinforces the negative mental model that the
+user is a problem to be managed. This gap motivates the strength-based design
+framework presented in Section~3, which translates the six cognitive
+strength--executive challenge pairings into abstract design principles as the
+conceptual foundation for PP.
 
-\begin{enumerate}
-  \item Use divergent thinking and creativity to redirect ADHD attention from
-    intrinsic tasks toward the required extrinsic task.
-  \item Replace long-term reward tasks with chains of short-term positive
-    rewards to evoke impulsive decision-making without triggering anxiety.
-  \item Replace abstract priority ordering with a high-meaning goal narrative;
-    completing the priority task becomes the necessary path to a personally
-    significant outcome.
-  \item Present memory-intensive tasks in an artistic form to reduce working
-    memory loss.
-  \item Add a community section to sustain positive mood through social
-    connection beyond the individual patient.
-  \item Draw on strength-aligned modules identified in the review: tagging,
-    positive thinking, mapping, habit tracking, community interaction, and
-    random creative prompts.
-  \item Extend the inherent negative mental model (``I need to be managed'')
-    with positive elements, using a virtuous circle to motivate self-initiated
-    action.
-  \item Adhere to the six core UI principles and use visual, symbolic, and
-    pictorial design to conceptualise a positive mental model.
-\end{enumerate}
+\section{Strength-Based Design Framework}
 
-\section{Theoretical Framework: Six Strengths and Six Deficits}
+This section translates the six cognitive strength--executive challenge pairings
+identified in Section~2.1 into abstract design principles for PP. Each principle
+serves as a conceptual bridge between the observed ADHD characteristic and the
+interaction approach adopted in the application. Neurological evidence is not
+repeated here; this section focuses on the design rationale. Table~\ref{tab:framework}
+summarises all six pairings and their derived principles.
 
-The following pairings form the conceptual core of PP.
+\textbf{Cognitive Vitality / Concentration.}
+Cognitive vitality characterises the spontaneous, internally driven ideation of
+people with ADHD, which conflicts with demands for sustained external attention.
+This suggests that divergent thinking may be engaged as a resource rather than
+suppressed as a distraction. \textit{Derived design principle:} Use divergent
+thinking as an entry point for redirecting attention toward externally required
+tasks.
 
-\textbf{Cognitive Vitality vs.\ Concentration.} The brain's default network is
-persistently active in ADHD, causing mind-wandering yet enabling divergent
-thinking and creativity. The neural system involved produces spontaneous,
-non-sequential ideation. Divergent creativity is therefore used as a hook to
-redirect attention toward external tasks.
+\textbf{Courage / Emotion.}
+Courage captures the tendency of people with ADHD to embrace uncertainty and
+make rapid decisions under positive short-term conditions. The same emotional
+profile, however, produces aversive responses to anticipated long-term outcomes
+and procrastination under delayed reward. \textit{Derived design principle:}
+Support task engagement through positively framed, short-horizon actions that
+replace aversive or distant outcomes.
 
-\textbf{Courage vs.\ Emotion.} The amygdala is over-activated in ADHD, leading
-to emotional impulsivity but also risk-taking and non-conformity. The
-over-sensitivity to negative stimuli produces procrastination. Positive
-risk-taking courage is leveraged to displace avoidant behaviour.
+\textbf{Energy / Activation.}
+Energy describes the willpower that people with ADHD experience when pursuing
+personally meaningful goals, potentially producing hyper-focus in the presence
+of a motivating purpose. The corresponding challenge is difficulty initiating
+and prioritising tasks that lack personal significance. \textit{Derived design
+principle:} Connect tasks to personally meaningful goals and higher-order
+purposes to support willpower and task initiation.
 
-\textbf{Energy vs.\ Activation.} The dorsal attention network (DAN) dominates in
-ADHD, generating hyper-focus when a personally meaningful goal is present but
-causing neglect of lower-priority tasks~\cite{corbetta2002}. High-meaning
-goal-setting replaces traditional priority ordering to activate task engagement.
+\textbf{Humanity / Execution.}
+Humanity encompasses social intelligence, empathy, and positive emotional
+contagion. The corresponding challenge is difficulty adapting behaviour to
+changing situational demands. \textit{Derived design principle:} Use social
+connectedness and positive emotional expression to support sustained engagement
+and positive affect during task execution.
 
-\textbf{Humanity vs.\ Execution.} Mirror neuron activity drives strong social
-empathy and humour. Positive social connections sustain emotional regulation,
-extending this strength to maintain a supportive mood during task execution.
+\textbf{Resilience / Effort.}
+Resilience describes the capacity of people with ADHD for self-regulation and
+adaptive coping under adverse conditions, though mental fatigue under prolonged
+cognitive load limits the effectiveness of sustained self-regulation.
+\textit{Derived design principle:} Offer adaptive coping strategies as flexible
+and optional resources during periods of cognitive fatigue, rather than as fixed
+requirements.
 
-\textbf{Resilience vs.\ Effort.} The anterior cingulate cortex drives
-self-regulation, but ego depletion leads to mental fatigue and ineffective
-sustained effort. Resilience is channelled into adaptive coping strategies that
-are embedded as options within the application flow.
-
-\textbf{Transcendence vs.\ Memory.} People with ADHD show high absorption
-during aesthetic experiences, facilitating deep memory encoding. Tasks that
-require working memory are therefore presented in an artistic, visually rich
-form to strengthen retention.
-
-Table~\ref{tab:framework} summarises the six pairings together with the
-responsible neural system and the resulting design direction for each module.
+\textbf{Transcendence / Memory.}
+Transcendence captures the deep aesthetic absorption characteristic of people
+with ADHD. The corresponding challenge is difficulty retaining information in
+working memory during routine or low-stimulation tasks. \textit{Derived design
+principle:} Use visually or aesthetically meaningful representations of
+task-related information to support encoding and retention.
 
 \begin{table*}
-  \caption{Neurodiversity analysis: cognitive strengths, executive deficits,
-    neural systems, and PP design directions.}
+  \caption{Strength-based design framework: cognitive strengths, executive
+    challenges, associated neural basis, and derived design principles.}
   \label{tab:framework}
-  \begin{tabular}{p{0.10\linewidth} p{0.11\linewidth} p{0.18\linewidth} p{0.50\linewidth}}
+  \begin{tabular}{p{0.10\linewidth} p{0.12\linewidth} p{0.22\linewidth} p{0.44\linewidth}}
     \toprule
-    \textbf{Strength} & \textbf{Executive Deficit} & \textbf{Neural System} & \textbf{Design Direction} \\
+    \textbf{Cognitive Strength} & \textbf{Executive Challenge} &
+    \textbf{Associated Neural Basis} & \textbf{Derived Design Principle} \\
     \midrule
     Cognitive Vitality &
       Concentration &
-      Default Mode Network (persistently active; internal ideation) &
-      Harness divergent thinking and creativity as an entry point for external tasks; a creative word-association exercise focuses attention on the required task subject. \\
+      Default Mode Network (associated with internal ideation; may remain
+        persistently active in ADHD during external tasks) &
+      Divergent thinking may serve as an entry point for redirecting attention
+        toward externally required tasks. \\
     \addlinespace
     Courage &
       Emotion &
-      Amygdala (over-activated) and Ventral Striatum (under-activated) &
-      Leverage non-conformity, risk-taking, and persistence to displace procrastination; replace aversive long-term rewards with chains of short-term positive rewards. \\
+      Amygdala and Ventral Striatum (associated with emotional regulation and
+        sensitivity to reward timing) &
+      Task engagement may be supported by positively framed, short-horizon
+        actions that replace aversive or distant outcomes. \\
     \addlinespace
     Energy &
       Activation &
-      Dorsal Attention Network (DAN dominates over VAN) &
-      Replace abstract priority ordering with high-meaning goal narratives; associating a task with a personally significant purpose activates willpower to begin. \\
+      Dorsal Attention Network (associated with top-down goal-directed
+        attention; may produce hyper-focus under personally meaningful goals) &
+      Connecting tasks to personally meaningful goals and higher-order purposes
+        may support willpower and task initiation. \\
     \addlinespace
     Humanity &
       Execution &
-      Mirror Neurons (strong empathic resonance) &
-      Use positive social connection as an extension tool; community sharing sustains positive mood and supports behaviour continuity. \\
+      Mirror Neuron System (associated with empathic resonance and social
+        affect) &
+      Social connectedness and positive emotional expression may support
+        sustained engagement and positive affect during task execution. \\
     \addlinespace
     Resilience &
       Effort &
-      Anterior Cingulate Cortex (self-regulation limited by ego depletion) &
-      Embed adaptive coping strategies as optional branching choices rather than mandatory steps; resilience supports choice-driven self-management. \\
+      Anterior Cingulate Cortex (associated with cognitive control;
+        self-regulation may be limited by ego depletion under conflict) &
+      Adaptive self-regulation strategies should be offered as flexible and
+        optional resources to support coping during cognitive fatigue. \\
     \addlinespace
     Transcendence &
       Memory &
-      Corticocerebellar Network with Norepinephrine (deep aesthetic encoding) &
-      Present memory-intensive task information in an artistic, puzzle-based form; aesthetic engagement deepens working memory encoding. \\
+      Corticocerebellar Network with Norepinephrine (associated with working
+        memory; aesthetic absorption may facilitate deep encoding) &
+      Visually or aesthetically meaningful representations of task-related
+        information may support encoding and retention. \\
     \bottomrule
   \end{tabular}
 \end{table*}
-
-A review of 22 representative ADHD management applications (10,000--50,000
-downloads) confirmed that no existing tool exploits these positive
-characteristics; all rely on mandatory reminders, timers, or correction
-mechanisms~\cite{pasarelu2020}.
 
 \section{User Group and Requirements}
 
@@ -374,37 +388,93 @@ positive engagement rather than coercion.
 
 \subsection{Module Logic}
 
-Each of the six cognitive strengths maps to a distinct application module:
+PP implements one interaction module per cognitive strength--executive challenge
+pairing. Each module description below follows the structure: \textit{executive
+challenge / cognitive strength / derived design principle / PP implementation /
+intended interaction outcome}.
 
-\begin{itemize}
-  \item \textbf{Concentration module} (Cognitive Vitality): The user flips five
-    favourite images and clicks to reveal five random words. Their task is to
-    create something based on those words with the required external task as the
-    subject, harnessing divergent thinking to pull attention toward the task.
+\textbf{Concentration module (Cognitive Vitality / Concentration).}
+\textit{Executive challenge:} Difficulty sustaining attention on external tasks
+due to persistent internal ideation.
+\textit{Cognitive strength:} Spontaneous, non-sequential divergent thinking.
+\textit{Derived design principle:} Use divergent thinking as an entry point for
+redirecting attention toward externally required tasks.
+\textit{PP implementation:} Users are presented with a set of randomly generated
+visual or verbal prompts and asked to produce a creative response that connects
+those prompts to the task they need to complete.
+\textit{Intended interaction outcome:} Creative engagement acts as a bridge
+between intrinsic ideation and the required extrinsic task, redirecting rather
+than suppressing internal cognitive energy.
 
-  \item \textbf{Memory module} (Transcendence): Before a puzzle task, the user
-    enters information they need to retain. Each item is mapped to a puzzle
-    piece; hovering over a piece in the puzzle displays the corresponding fact,
-    reinforcing working memory through aesthetic engagement.
+\textbf{Memory module (Transcendence / Memory).}
+\textit{Executive challenge:} Difficulty retaining task-relevant information in
+working memory.
+\textit{Cognitive strength:} Deep aesthetic absorption that may facilitate
+encoding during experiences of wonder or beauty.
+\textit{Derived design principle:} Use visually or aesthetically meaningful
+representations of task-related information to support encoding and retention.
+\textit{PP implementation:} Users enter key task information before an
+aesthetically rich interactive activity; each item is embedded within a visually
+engaging display and remains retrievable on demand throughout the activity.
+\textit{Intended interaction outcome:} Aesthetic engagement during task entry
+and recall supports retention without reliance on rote memorisation or external
+reminders.
 
-  \item \textbf{Persistent tasks module} (Humanity): The user occupies the centre
-    of a solar-system visualisation; each ongoing habit or responsibility is a
-    planet that lights up upon completion, building a positive social-identity
-    narrative.
+\textbf{Persistent tasks module (Humanity / Execution).}
+\textit{Executive challenge:} Difficulty maintaining habitual task routines and
+adapting behaviour over time.
+\textit{Cognitive strength:} Social empathy, positive emotional contagion, and
+social identity.
+\textit{Derived design principle:} Use social connectedness and positive
+emotional expression to support sustained engagement during routine task
+execution.
+\textit{PP implementation:} Ongoing habits and responsibilities are represented
+as planets in a personal solar-system visualisation; completing each
+responsibility illuminates the corresponding planet, building a positive
+social-identity narrative.
+\textit{Intended interaction outcome:} The social-identity metaphor sustains
+motivation for habit maintenance without coercive reminders.
 
-  \item \textbf{Long-term tasks module} (Energy): Long-term tasks are broken into
-    short-term sub-tasks, each linked to an immediate reward, converting aversive
-    distant goals into a chain of motivating short-horizon achievements.
+\textbf{Long-term tasks module (Courage / Emotion).}
+\textit{Executive challenge:} Aversive responses to long-term reward
+anticipation, producing emotional impulsivity and procrastination.
+\textit{Cognitive strength:} Responsiveness to immediate positive stimuli and
+risk-taking under short-horizon conditions.
+\textit{Derived design principle:} Support task engagement through positively
+framed, short-horizon actions that replace aversive or distant outcomes.
+\textit{PP implementation:} Long-term tasks are decomposed into short-term
+sub-tasks, each associated with an immediate positive reward upon completion.
+\textit{Intended interaction outcome:} Short-horizon reward cycles reduce
+procrastination by replacing aversive delay with achievable, immediate goals.
 
-  \item \textbf{Priority tasks module} (Courage): Users simulate costumes and
-    scenes from a favourite film or TV production to role-play completing
-    priority tasks in reality, anchoring task execution in a high-meaning,
-    self-determined narrative.
+\textbf{Priority tasks module (Energy / Activation).}
+\textit{Executive challenge:} Difficulty initiating and prioritising tasks that
+lack personal significance or a meaningful activation stimulus.
+\textit{Cognitive strength:} Willpower motivated by a strong desire to achieve
+something personally meaningful; hyper-focus in the presence of an ambitious
+personal goal.
+\textit{Derived design principle:} Connect tasks to personally meaningful goals
+and higher-order purposes to support willpower and task initiation.
+\textit{PP implementation:} Users adopt a chosen role or persona associated with
+a self-determined narrative and complete priority tasks within that imaginative
+context, anchoring task execution in personal meaning.
+\textit{Intended interaction outcome:} Embedding the priority task within a
+personally meaningful narrative activates goal-directed energy without relying
+on external authority or abstract priority ordering.
 
-  \item \textbf{Emotion module} (Resilience): When users are in a positive mood,
-    social expression links let them help other users or leave feedback; when
-    in a negative mood, a positive-thinking and meditation module is available.
-\end{itemize}
+\textbf{Emotion module (Resilience / Effort).}
+\textit{Executive challenge:} Difficulty sustaining self-regulation over time;
+mental fatigue under cognitive load.
+\textit{Cognitive strength:} Capacity for self-regulation and behavioural
+adjustment under adverse conditions.
+\textit{Derived design principle:} Offer adaptive coping strategies as flexible
+and optional resources during periods of cognitive fatigue.
+\textit{PP implementation:} When in a positive affective state, users are
+offered social-expression options; when in a negative state, a set of
+positive-thinking and guided-reflection resources is available.
+\textit{Intended interaction outcome:} Mood-contingent branching supports coping
+without imposing a fixed sequence, preserving user agency during periods of ego
+depletion.
 
 \subsection{Workflow}
 
@@ -418,11 +488,11 @@ rather than a sequential schedule.
 
 People with ADHD have heightened visuospatial processing sensitivity. The PP
 interface therefore uses: non-repetitive, non-patterned layouts; vivid colours
-representing high energy and positivity; irregular icon shapes that echo
-creativity and divergent thinking; and unique artwork in puzzle sections. The
-UI adheres to six empirically validated core principles: informative feedback,
-minimal memory load, good error messages, shortcuts, natural language, and
-real-world metaphors~\cite{ruiz2021}.
+associated with high energy and positivity; irregular icon shapes that echo
+creativity and divergent thinking; and aesthetically distinctive artwork within
+task modules. The UI adheres to six empirically validated core principles:
+informative feedback, minimal memory load, clear error messages, shortcuts,
+natural language, and real-world metaphors~\cite{ruiz2021}.
 
 \section{Prototype}
 
@@ -446,14 +516,15 @@ providing a principled basis for this extension.
 
 \section{Conclusion}
 
-PP is, to our knowledge, the first mobile application designed around ADHD
-cognitive strengths to circumvent executive disadvantages. It replaces coercion,
-reminders, and correction with creativity, high energy, dispersed thinking, and
-high-output engagement. The neurodiversity paradigm underlying PP provides a
-replicable design framework: identify the neural pathway linking a positive ADHD
-characteristic to its corresponding executive impairment, then design an
-interaction that activates the strength while naturally redirecting the
-impairment.
+PP is, to our knowledge, the first mobile task-management application grounded
+in a strength-based neurodiversity framework for ADHD. Rather than relying on
+reminders, timers, or behavioural correction, PP positions each cognitive
+strength as a conceptual basis for an interaction module that addresses the
+corresponding executive challenge. The underlying design approach is replicable:
+identify a cognitive strength and its associated executive challenge in the
+literature, derive an abstract design principle from that pairing, and implement
+a concrete interaction that instantiates the principle without imposing
+deficit-oriented constraints.
 
 Limitations include a small user testing sample (N\,=\,3) and limited coverage of
 users with deafblindness. Future work will expand evaluation and incorporate
