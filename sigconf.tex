@@ -261,60 +261,27 @@ framework presented in Section~3, which translates the six cognitive
 strength--executive challenge pairings into abstract design principles as the
 conceptual foundation for PP.
 
-\section{Strength-Based Design Framework}
+\section{User Group and Requirements}
 
-This section translates the six cognitive strength--executive challenge pairings
-identified in Section~2.1 into abstract design principles for PP. Each principle
-serves as a conceptual bridge between the observed ADHD characteristic and the
-interaction approach adopted in the application. Neurological evidence is not
-repeated here; this section focuses on the design rationale. Table~\ref{tab:framework}
-summarises all six pairings and their derived principles.
+Approximately 2.8\% of adults worldwide have ADHD~\cite{faraone2006}. An
+analysis of two qualitative studies (422 adults with ADHD across six countries)
+showed that participants described their own strengths---problem-solving, fantasy,
+novelty-seeking, deep focus, empathy, resilience---yet received little external
+recognition of them. A review of 127 ADHD studies found that 29\% of treated and
+56\% of untreated adults reported low self-esteem, and 38--73\% felt their social
+functioning was affected~\cite{harpin2016}.
 
-\textbf{Cognitive Vitality / Concentration.}
-Cognitive vitality characterises the spontaneous, internally driven ideation of
-people with ADHD, which conflicts with demands for sustained external attention.
-This suggests that divergent thinking may be engaged as a resource rather than
-suppressed as a distraction. \textit{Derived design principle:} Use divergent
-thinking as an entry point for redirecting attention toward externally required
-tasks.
+PP therefore targets two parallel needs: (1)~social recognition and affirmation
+of ADHD strengths; and (2)~support for executive skill and self-esteem through
+positive engagement rather than coercion.
 
-\textbf{Courage / Emotion.}
-Courage captures the tendency of people with ADHD to embrace uncertainty and
-make rapid decisions under positive short-term conditions. The same emotional
-profile, however, produces aversive responses to anticipated long-term outcomes
-and procrastination under delayed reward. \textit{Derived design principle:}
-Support task engagement through positively framed, short-horizon actions that
-replace aversive or distant outcomes.
+\section{Design}
 
-\textbf{Energy / Activation.}
-Energy describes the willpower that people with ADHD experience when pursuing
-personally meaningful goals, potentially producing hyper-focus in the presence
-of a motivating purpose. The corresponding challenge is difficulty initiating
-and prioritising tasks that lack personal significance. \textit{Derived design
-principle:} Connect tasks to personally meaningful goals and higher-order
-purposes to support willpower and task initiation.
-
-\textbf{Humanity / Execution.}
-Humanity encompasses social intelligence, empathy, and positive emotional
-contagion. The corresponding challenge is difficulty adapting behaviour to
-changing situational demands. \textit{Derived design principle:} Use social
-connectedness and positive emotional expression to support sustained engagement
-and positive affect during task execution.
-
-\textbf{Resilience / Effort.}
-Resilience describes the capacity of people with ADHD for self-regulation and
-adaptive coping under adverse conditions, though mental fatigue under prolonged
-cognitive load limits the effectiveness of sustained self-regulation.
-\textit{Derived design principle:} Offer adaptive coping strategies as flexible
-and optional resources during periods of cognitive fatigue, rather than as fixed
-requirements.
-
-\textbf{Transcendence / Memory.}
-Transcendence captures the deep aesthetic absorption characteristic of people
-with ADHD. The corresponding challenge is difficulty retaining information in
-working memory during routine or low-stimulation tasks. \textit{Derived design
-principle:} Use visually or aesthetically meaningful representations of
-task-related information to support encoding and retention.
+PP translates each of the six cognitive strength--executive challenge pairings
+identified in Section~2 into a concrete interaction module. Table~\ref{tab:framework}
+presents the framework as a whole, mapping each pairing to its associated neural
+basis and derived design principle. The subsections below describe the resulting
+modules in detail.
 
 \begin{table*}
   \caption{Strength-based design framework: cognitive strengths, executive
@@ -370,28 +337,11 @@ task-related information to support encoding and retention.
   \end{tabular}
 \end{table*}
 
-\section{User Group and Requirements}
-
-Approximately 2.8\% of adults worldwide have ADHD~\cite{faraone2006}. An
-analysis of two qualitative studies (422 adults with ADHD across six countries)
-showed that participants described their own strengths---problem-solving, fantasy,
-novelty-seeking, deep focus, empathy, resilience---yet received little external
-recognition of them. A review of 127 ADHD studies found that 29\% of treated and
-56\% of untreated adults reported low self-esteem, and 38--73\% felt their social
-functioning was affected~\cite{harpin2016}.
-
-PP therefore targets two parallel needs: (1)~social recognition and affirmation
-of ADHD strengths; and (2)~support for executive skill and self-esteem through
-positive engagement rather than coercion.
-
-\section{Design}
-
 \subsection{Module Logic}
 
-PP implements one interaction module per cognitive strength--executive challenge
-pairing. Each module description below follows the structure: \textit{executive
-challenge / cognitive strength / derived design principle / PP implementation /
-intended interaction outcome}.
+PP implements one interaction module per pairing. Each description below
+follows the structure: \textit{executive challenge / cognitive strength /
+derived design principle / PP implementation / intended interaction outcome}.
 
 \textbf{Concentration module (Cognitive Vitality / Concentration).}
 \textit{Executive challenge:} Difficulty sustaining attention on external tasks
