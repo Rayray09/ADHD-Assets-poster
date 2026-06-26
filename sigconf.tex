@@ -115,62 +115,174 @@ naturally redirect attention toward the required task.
 
 \section{Related Works}
 
-\subsection{Positive Characteristics of ADHD}
+The neurodiversity of executive functions in ADHD is concentrated in four brain
+regions: the prefrontal cortex, the basal ganglia, the cerebellum, and the
+parietal-temporal region, operating through the reticular activating
+system~\cite{castellanos2002,valera2007}. These regions cannot be categorised
+independently; they form a dynamic, integrated management process in which
+executive processing depends on coordinated activity across multiple cognitive
+components. This section analyses that neurodiversity by (i)~examining the
+neural connections through which positive and negative characteristics can be
+interchanged, (ii)~reviewing functional modules of existing ADHD management
+applications, and (iii)~reviewing the interaction design principles required for
+mobile application development. All three inform the PP prototype.
 
-The neurodiversity paradigm holds that all neurological variation is a natural
-part of human diversity~\cite{denhouting2019}. Within this paradigm, ADHD is
-increasingly studied for its positive dimensions. Sedgwick et al.\ \cite{sedgwick2019}
-conducted a qualitative investigation of successful adults with ADHD, identifying
-six core positive themes---cognitive vitality, courage, energy, humanity,
-resilience, and transcendence---that represent real functional assets. Schippers
-et al.\ \cite{schippers2022} corroborated these themes in a mixed-methods study
-(N\,=\,422 across six countries), finding that the vast majority of participants
-perceived a positive effect of ADHD on their lives yet received little social
-recognition for these traits. Brown's executive functioning model~\cite{nigg2005} provides the
-complementary deficit side, identifying six dimensions of impairment:
-activation, concentration, effort, emotion, memory, and execution.
-This model was selected for two reasons. First, it is the most comprehensive
-and widely validated multi-dimensional account of how ADHD affects executive
-function across adult daily life, covering behavioural, emotional, and
-cognitive domains together rather than treating them in isolation. Second,
-and critically for this work, its six impairment dimensions map one-to-one
-onto the six positive themes identified by Sedgwick et al.\ and Schippers
-et al.---a structural correspondence that is not coincidental. Both sides
-share the same underlying neural substrates: the same brain regions and
-networks (e.g.\ the default mode network, the amygdala, the dorsal attention
-network) that produce each executive impairment are also responsible for
-generating the corresponding cognitive strength. This means each strength is
-not merely \emph{adjacent} to its paired deficit but is produced by the
-same neurological mechanism---making it a principled, rather than arbitrary,
-compensatory tool. The pairing framework therefore provides a direct
-theoretical basis for designing interactions that activate a strength through
-its shared neural pathway to redirect the impairment.
+\subsection{Research Overview}
 
-\subsection{Existing ADHD Digital Tools}
+A fundamental assumption of the neurodiversity paradigm is that all forms of
+neurological variation are valuable~\cite{denhouting2019}. Within this paradigm,
+qualitative research by Sedgwick et al.~\cite{sedgwick2019} and Schippers
+et al.~\cite{schippers2022} identifies six core positive themes in adults with
+ADHD: \textit{cognitive vitality}, \textit{courage}, \textit{energy},
+\textit{humanity}, \textit{resilience}, and \textit{transcendence}. Brown's
+executive functioning model~\cite{nigg2005} identifies six corresponding
+impairment dimensions---activation, concentration, effort, emotion, memory, and
+execution. This model was selected because its six dimensions map one-to-one
+onto the six positive themes, a structural correspondence arising from shared
+neural substrates: the same brain regions and networks that produce each
+executive impairment also generate the corresponding cognitive strength. Each
+strength is therefore a principled, neurologically grounded compensatory tool
+for its paired deficit. The six pairings and their neural bases are as follows.
 
-A systematic review of 355 ADHD-related app studies~\cite{pasarelu2020}
-identified 63 focused on executive management, with most yielding negative
-long-term outcomes: symptom relief did not persist post-intervention, and users
-experienced heightened anxiety upon disengagement from the tool. A review of 22
-representative apps available for adults with ADHD (10,000--50,000 downloads)
-spanning task management, habit tracking, time management, emotion regulation, and
-focus enhancement confirms that all rely on control-based mechanisms---mandatory
-reminders, countdown timers, and correction prompts. No existing tool is designed
-to harness the positive cognitive profile of ADHD users. Beyond limited
-effectiveness, this design posture actively reinforces a deficit-oriented mental
-model, reducing long-term engagement and self-esteem.
+\textbf{Cognitive Vitality vs.\ Concentration.}
+Cognitive vitality summarises the uninterrupted mental activity, spontaneous
+non-sequential thought, and intense internal concentration characteristic of
+ADHD. The corresponding neural system is the brain's default mode network
+(DMN), which is negatively activated during external attention tasks and
+positively activated during internal tasks related to self, memory, and future
+vision~\cite{sestieri2011}. In ADHD the DMN remains persistently active,
+producing the inability to focus on external tasks for long periods while
+simultaneously preventing disengagement from internal ideation. \textit{Design
+direction:} the cognitive dynamism of divergent thinking, creativity, and
+curiosity can be used as a management tool to draw attention from intrinsic
+tasks toward the required extrinsic task.
 
-\subsection{UI Design for ADHD Populations}
+\textbf{Courage vs.\ Emotion.}
+Courage summarises how people with ADHD face fears and deal with uncertainty
+through non-conformity, risk-taking, and the drive for individualisation. The
+neural system involved is the amygdala (over-activated in ADHD, including
+dopamine receptor density) in conjunction with the ventral striatum
+(under-activated)~\cite{knutson2001}. This produces emotional impulsivity,
+inadequate self-regulation, and aversive responses to long-term reward
+anticipation. \textit{Design direction:} the non-conformity, risk-taking,
+integrity, and persistence of courage can serve as tools to avoid
+procrastination; short-term reward chains replace anxiety-provoking long-term
+goals.
 
-Mental models are central to user-centred design~\cite{ruiz2021}. A systematic
-review of 257 widely cited UI principles distilled six core guidelines for
-interactive systems: providing informative feedback, minimising memory load,
-clear error messages, shortcuts, natural language, and real-world metaphors.
-Research additionally shows that graphical interfaces outperform text-only
-representations for ADHD populations, and that design outputs encoding cultural
-and symbolic elements through visual and pictorial means most effectively
-build the mental models of these users. These findings directly inform PP's
-visual design strategy.
+\textbf{Energy vs.\ Activation.}
+Energy summarises the psycho-energetic willpower motivated by a strong desire to
+achieve something meaningful. The dorsal attention network (DAN) is more active
+than the ventral attention network (VAN) in ADHD, elevating top-down selective
+attention while impeding bottom-up priority shifting~\cite{corbetta2002}.
+Consequently, ADHD does not perceive time as a sequence but as a dispersed
+collection of emotionally linked events, making task prioritisation difficult.
+Yet hyper-focus emerges when an ambitious personal goal is present.
+\textit{Design direction:} replacing priority ordering with a high-meaning goal
+narrative activates willpower to begin and sustain priority tasks.
+
+\textbf{Humanity vs.\ Execution.}
+Humanity summarises social intelligence, humour, self-acceptance, and empathy
+in social behaviour. Mirror neurons produce strong empathic resonance and
+positive emotional contagion but also difficulty adapting behaviour when
+others are puzzled or upset. \textit{Design direction:} positive social energy
+can be used as an extension tool to maintain positive emotions; behaviour
+change requires additional complementary tools.
+
+\textbf{Resilience vs.\ Effort.}
+Resilience describes how people with ADHD self-regulate and self-protect under
+adverse conditions through behavioural adjustment strategies. The anterior
+cingulate cortex drives cognitive control and behavioural monitoring, but ego
+depletion under antagonistic conflict leads to mental fatigue and ineffective
+sustained self-regulation~\cite{carter2007}. \textit{Design direction:}
+resilience strategies cannot function as a stand-alone module but must be
+embedded alongside other adjustment strategies as optional coping choices.
+
+\textbf{Transcendence vs.\ Memory.}
+Transcendence describes the rapid aesthetic absorption---awe, wonder, and deep
+memorisation---that people with ADHD experience, particularly with music and
+art. The corticocerebellar network with norepinephrine underpins working memory;
+in ADHD, internal norepinephrine links are weakened, yet high absorption during
+aesthetic experiences produces deep encoding~\cite{shiota2006}.
+\textit{Design direction:} presenting memory-intensive task content in an
+artistic form deepens working memory retention.
+
+\subsection{Mobile Tools Research}
+
+\subsubsection{User Interaction Design.}
+Mental models are the key to user-centred design~\cite{ruiz2021}. A mental
+model is a person's abstract concept of a device that enables them to interpret
+and predict an application. Research shows that graphical interfaces outperform
+text-only representations, and that visual, symbolic, and pictorial design
+elements are the primary medium through which mental models are
+conceptualised. From a systematic review of 257 widely cited UI design
+principles, six core guidelines were identified: providing informative feedback,
+minimising memory load, clear error messages, providing shortcuts, using natural
+language, and using real-world metaphors~\cite{ruiz2021}. The inherent mental
+model of people with ADHD is largely negative (``I need to be managed''); PP's
+framework must extend this model with positive elements through a virtuous-circle
+design logic.
+
+\subsubsection{Interactive Modules.}
+A review of 22 representative ADHD management applications (10,000--50,000
+downloads) was conducted, covering diagnostic tools, task management, habit
+building, time management, focus enhancement, emotion regulation, memory
+support, and financial management~\cite{pasarelu2020}. Table~\ref{tab:apps}
+summarises the resulting module analysis by dysfunction. The review reveals that
+most modules address symptoms through mandatory reminders and timers with no
+leverage of ADHD cognitive strengths, while a subset---mapping, meditation,
+community interaction, and random creative prompts---do align with positive ADHD
+characteristics. No existing tool integrates these strength-aligned modules into
+a unified framework.
+
+\begin{table*}
+  \caption{ADHD application module analysis: dysfunction targeted, interaction
+    type, and whether the module leverages ADHD cognitive strengths (adapted
+    from review of 22 representative apps).}
+  \label{tab:apps}
+  \begin{tabular}{p{0.10\linewidth} p{0.16\linewidth} p{0.20\linewidth}
+                  p{0.30\linewidth} c}
+    \toprule
+    \textbf{Dysfunction} & \textbf{Symptom} & \textbf{Module} &
+    \textbf{Interaction Element} & \textbf{Leverages Strengths?} \\
+    \midrule
+    Activation  & Time chaos            & Task reminder    & Mandatory reminder          & No  \\
+    Activation  & Time chaos            & Label / tagging  & Information capture          & Yes \\
+    Focus       & Lack of attention     & Timer            & Mandatory countdown          & No  \\
+    Effort      & Inability to sustain  & Timer            & Mandatory countdown          & No  \\
+    Emotion     & Impulsive decision    & Meditation       & Mindful relaxation           & Yes \\
+    Memory      & Missing tasks         & Mapping          & Visual spatialisation        & Yes \\
+    Execution   & Cannot adjust behaviour & Habit tracker  & Self-awareness, personalised time & Yes \\
+    Social      & Low positive mood     & Community        & Patient interaction          & Yes \\
+    Creativity  & Dispersed thinking    & Random prompts   & Idea generation              & Yes \\
+    \bottomrule
+  \end{tabular}
+\end{table*}
+
+\subsection{Research Conclusions}
+
+The background analysis yields eight design conclusions that inform PP:
+
+\begin{enumerate}
+  \item Use divergent thinking and creativity to redirect ADHD attention from
+    intrinsic tasks toward the required extrinsic task.
+  \item Replace long-term reward tasks with chains of short-term positive
+    rewards to evoke impulsive decision-making without triggering anxiety.
+  \item Replace abstract priority ordering with a high-meaning goal narrative;
+    completing the priority task becomes the necessary path to a personally
+    significant outcome.
+  \item Present memory-intensive tasks in an artistic form to reduce working
+    memory loss.
+  \item Add a community section to sustain positive mood through social
+    connection beyond the individual patient.
+  \item Draw on strength-aligned modules identified in the review: tagging,
+    positive thinking, mapping, habit tracking, community interaction, and
+    random creative prompts.
+  \item Extend the inherent negative mental model (``I need to be managed'')
+    with positive elements, using a virtuous circle to motivate self-initiated
+    action.
+  \item Adhere to the six core UI principles and use visual, symbolic, and
+    pictorial design to conceptualise a positive mental model.
+\end{enumerate}
 
 \section{Theoretical Framework: Six Strengths and Six Deficits}
 
