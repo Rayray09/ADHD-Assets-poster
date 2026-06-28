@@ -108,92 +108,20 @@ activates the strength to support task engagement.
 
 \section{Related Works}
 
-The neurodiversity of executive functions in ADHD is concentrated in four brain
-regions: the prefrontal cortex, the basal ganglia, the cerebellum, and the
-parietal-temporal region, operating through the reticular activating
-system~\cite{castellanos2002,valera2007,nakao2011,durston2004}. These regions
-cannot be categorised independently; they form a dynamic, integrated management
-process in which executive processing depends on coordinated activity across
-multiple cognitive components. This section analyses that neurodiversity by (i)~examining the
-neural connections through which positive and negative characteristics can be
-interchanged, (ii)~reviewing functional modules of existing ADHD management
-applications, and (iii)~reviewing the interaction design principles required for
-mobile application development. All three inform the StrengthFlow prototype.
-
-\subsection{Research Overview}
-
-A fundamental assumption of the neurodiversity paradigm is that all forms of
-neurological variation are valuable~\cite{denhouting2019}. Within this paradigm,
-qualitative research by Sedgwick et al.~\cite{sedgwick2019} and Schippers
-et al.~\cite{schippers2022} identifies six core positive themes in adults with
-ADHD: \textbf{cognitive vitality}, \textbf{courage}, \textbf{energy},
-\textbf{humanity}, \textbf{resilience}, and \textbf{transcendence}. Brown's
-executive functioning model~\cite{nigg2005} identifies six corresponding
-impairment dimensions: \textbf{activation}, \textbf{concentration}, \textbf{effort}, \textbf{emotion}, \textbf{memory}, and
-\textbf{execution}. The six dimensions within this model map one-to-one
-onto the six positive themes, a structural correspondence arising from shared
-neural substrates: the same brain regions and networks that produce each
-executive impairment also generate the corresponding cognitive
-strength~\cite{castellanos2002,valera2007,nakao2011,durston2004}. Each
-strength is therefore a principled, neurologically grounded compensatory advantage for its paired deficit. The six pairings and their neural bases are as follows.
-
-\textbf{Cognitive Vitality vs.\ Concentration.} 
-Cognitive vitality describes the continuous mental activity, spontaneous non-sequential thinking, vivid imagery, and intense internal focus often associated with ADHD \cite{stine2008,ammaniti2013}. These characteristics may be linked to the default mode network (DMN), which supports internally oriented processes such as self-reflection, memory, imagination, and future thinking, but is typically suppressed during externally focused tasks \cite{sestieri2011}. From a neurodiversity perspective, altered DMN dynamics—particularly reduced suppression during external tasks—can be understood as having two interrelated aspects: they may support creativity, curiosity, divergent thinking, and rapid associations, while also competing with the attention required to sustain and complete external tasks. \textbf{Design implication:} rather than suppressing internal ideation, design can use these cognitive strengths as entry points for redirecting attention towards externally required tasks \cite{mole2022}.
-
-\textbf{Courage vs.\ Emotion.}
-Courage describes how some people with ADHD confront fear and uncertainty through non-conformity, risk-taking, integrity, persistence, and self-determination~\cite{williams2008}. These characteristics may be associated with differences in the amygdala and ventral striatum, which contribute to emotional processing, reward anticipation, and behavioural motivation~\cite{plessen2006,plichta2014}. From a neurodiversity perspective, this variation in emotion and reward processing can be understood as having two interrelated aspects: heightened sensitivity to negative stimuli and reduced responsiveness to delayed rewards may contribute to emotional reactivity, impulsivity, and avoidance of distant outcomes, while responsiveness to immediate or personally meaningful rewards may support rapid decision-making, persistence, and willingness to act~\cite{du2006,knutson2001}. \textbf{Design implication:} design can channel courage through immediate, positively framed actions and short-term rewards to reduce procrastination, while recognising that these strategies do not directly address emotional outbursts.
-
-\textbf{Energy vs.\ Activation.}
-Energy describes the willpower and sustained drive that some people with ADHD experience when pursuing personally meaningful goals, often accompanied by a strong sense of purpose~\cite{schippers2022}. These characteristics may be associated with differences in the balance between the dorsal attention network (DAN), which supports goal-directed attention, and the ventral attention network (VAN), which supports the flexible reorientation of attention~\cite{corbetta2002}. From a neurodiversity perspective, this variation in attention regulation can be understood as having two interrelated aspects: it may enable intense engagement and hyperfocus when a task is personally meaningful, while also making it difficult to shift attention, initiate less stimulating tasks, and organise competing priorities. \textbf{Design implication:} design can connect required tasks to personally meaningful goals, using purpose and intrinsic motivation to support task activation and prioritisation.
-
-
-\textbf{Humanity vs.\ Execution.}
-In this framework, humanity describes a positive core theme reported by some people with ADHD, encompassing social intelligence, humour, self-acceptance, empathy, and emotional awareness in social interactions. These characteristics may involve social-cognitive and affective processes associated with the mirror neuron system, which supports the perception and internal representation of others’ actions and emotions~\cite{humphrey1976,salovey1990}. From a neurodiversity perspective, variation in social and emotional processing among some people with ADHD can be understood as having two interrelated aspects: it may support strong empathy, positive emotional expression, and social connection, while also contributing to difficulties interpreting others’ responses and adapting behaviour when an interaction becomes uncertain or negative. \textbf{Design implication:} design can use supportive social interaction and positive emotional expression to sustain engagement, while recognising that additional guidance may be needed to support behavioural adaptation.
-
-\textbf{Resilience vs.\ Effort.}
-In this framework, resilience describes a positive core theme reported by some people with ADHD, encompassing self-regulation, self-protection, and behavioural adaptation under adverse conditions~\cite{garmezy1971}. These processes may involve the anterior cingulate cortex, which contributes to cognitive control, conflict monitoring, and behavioural regulation~\cite{carter2007}. From a neurodiversity perspective, variation in effort regulation among some people with ADHD can be understood as having two interrelated aspects: it may support adaptive coping and behavioural adjustment in response to adversity, while sustained demands for self-control may also lead to mental fatigue and reduced capacity to maintain effort, described in this literature as ego depletion~\cite{baumeister2000}. \textbf{Design implication:} design should support resilience through flexible and optional coping strategies integrated with other forms of task support, rather than treating self-regulation as a stand-alone or compulsory solution.
-
-\textbf{Transcendence vs.\ Memory.}
-In this framework, transcendence describes a positive core theme reported by some people with ADHD, encompassing intense appreciation of beauty and excellence, particularly in music and other artistic experiences, together with feelings of awe, wonder, and deep absorption~\cite{martinez2016,shiota2006}. These characteristics may involve working-memory processes associated with corticocerebellar networks and noradrenergic modulation. From a neurodiversity perspective, variation in memory and experiential processing among some people with ADHD can be understood as having two interrelated aspects: emotionally and aesthetically meaningful experiences may promote deep engagement and memorable encoding, while information lacking personal, emotional, or sensory salience may be more difficult to retain and recall. \textbf{Design implication:} design can use aesthetically engaging and personally meaningful representations to support the encoding and recall of task-related information, while recognising that aesthetic engagement alone may not address all working-memory difficulties.
-
-\subsection{Interaction Design Principles and Application Analysis}
-
-\subsubsection{Interaction Design Principles.}
-The inherent mental model of people with ADHD is largely negative---``I need to
-be managed''---a framing reinforced by existing deficit-oriented
-tools~\cite{harpin2016}. This
-raises the question of how a tool might instead reshape that model with positive
-elements. To explore this, we examined existing research on mental models and
-mobile interface design. Mental models---abstract cognitive structures through
-which users interpret and predict an application~\cite{rook1993}---are central
-to user-centred design~\cite{ruiz2021}. Research shows that visual, symbolic,
-and pictorial design elements are the primary medium through which mental models
-are conceptualised~\cite{goldschmidt2007,ourusoff1985}, and that structuring
-information around action-relevant schemas supports effective retrieval and
-application~\cite{ruggles1998}. A systematic review of 257 widely cited UI
-design principles identifies six core guidelines: providing informative
-feedback, minimising memory load, clear error messages, providing shortcuts,
-using natural language, and using real-world metaphors~\cite{ruiz2021}. These
-findings suggest that it is possible to actively reshape a user's mental model
-through design---in the case of ADHD, through a virtuous-circle logic in which
-engaging with one's strengths gradually reinforces a more capable
-self-perception.
-
-\subsubsection{Existing Application Analysis.}
-To explore the current landscape, we examined a prior systematic review of 22
-representative ADHD management applications (10,000--50,000 downloads) covering
-task management, habit building, time management, focus enhancement, emotion
-regulation, and memory support~\cite{pasarelu2020}. We applied a supplementary
-strength-based analysis to this existing review, classifying each module by
-whether its interaction design leverages ADHD cognitive strengths.
-Table~\ref{tab:apps} presents the results. Most modules operate through
-deficit-correction mechanisms---mandatory reminders, countdown timers, and
-forced behavioural prompts---with no leverage of cognitive strengths. A subset
-of modules---visual mapping, meditation, community interaction, and random
-creative prompts---do align with positive ADHD characteristics. However, no
-existing tool integrates these strength-aligned modules into a unified,
-theoretically grounded framework. This points to an unmet design opportunity:
-a tool grounded in the neurodiversity framework developed in Section~2.1.
+To understand the current landscape of digital tools for ADHD management, we
+examined a prior systematic review of 22 representative applications
+(10,000--50,000 downloads) covering task management, habit building, time
+management, focus enhancement, emotion regulation, and memory
+support~\cite{pasarelu2020}. We applied a supplementary strength-based analysis
+to this existing review, classifying each module by whether its interaction
+design leverages ADHD cognitive strengths. Table~\ref{tab:apps} presents the
+results. Most modules operate through deficit-correction
+mechanisms---mandatory reminders, countdown timers, and forced behavioural
+prompts---with no leverage of cognitive strengths. A subset of
+modules---visual mapping, meditation, community interaction, and random creative
+prompts---do align with positive ADHD characteristics. However, no existing tool
+integrates these strength-aligned modules into a unified, theoretically grounded
+framework, pointing to a clear gap in the field.
 
 \begin{table*}
   \caption{ADHD application module analysis: dysfunction targeted, interaction
@@ -219,26 +147,6 @@ a tool grounded in the neurodiversity framework developed in Section~2.1.
   \end{tabular}
 \end{table*}
 
-\subsection{Research Conclusions}
-
-The three strands of analysis above converge on a consistent finding. The neural
-substrate analysis (Section~2.1) establishes that each executive impairment in
-ADHD is produced by the same brain regions that also generate a corresponding
-cognitive strength, providing a principled, neurologically grounded basis for
-pairing deficit and strength in design. The interaction design research
-(Section~2.2.1) shows that mental models can be actively reshaped through
-visual and schema-based design, and that for ADHD users the priority is to
-replace the entrenched negative framing with one that engages and affirms
-cognitive capability. The application analysis (Section~2.2.2) confirms that no
-existing tool brings these two insights together: strength-aligned interaction
-patterns exist in isolation but have never been integrated into a unified,
-theoretically grounded framework. Together, these findings point to the need for
-a task management tool that grounds each interaction module in a specific
-strength--deficit neural pairing, applies evidence-based UI principles to ensure
-usability, and replaces deficit-correction mechanics with strength-activating
-ones---thereby reshaping the user's mental model from ``I need to be managed''
-to one of capability and positive identity.
-
 \section{User Group and Requirements}
 
 Approximately 2.8\% of adults worldwide have ADHD~\cite{faraone2006}. An
@@ -252,6 +160,153 @@ functioning was affected~\cite{harpin2016}.
 We therefore target two parallel needs: (1)~social recognition and affirmation
 of ADHD strengths; and (2)~support for executive skill and self-esteem through
 positive engagement rather than coercion.
+
+\section{Neurodiversity Framework: Strengths and Executive Challenges}
+
+The neurodiversity of executive functions in ADHD is concentrated in four brain
+regions: the prefrontal cortex, the basal ganglia, the cerebellum, and the
+parietal-temporal region, operating through the reticular activating
+system~\cite{castellanos2002,valera2007,nakao2011,durston2004}. These regions
+cannot be categorised independently; they form a dynamic, integrated management
+process in which executive processing depends on coordinated activity across
+multiple cognitive components.
+
+A fundamental assumption of the neurodiversity paradigm is that all forms of
+neurological variation are valuable~\cite{denhouting2019}. Within this paradigm,
+qualitative research by Sedgwick et al.~\cite{sedgwick2019} and Schippers
+et al.~\cite{schippers2022} identifies six core positive themes in adults with
+ADHD: \textbf{cognitive vitality}, \textbf{courage}, \textbf{energy},
+\textbf{humanity}, \textbf{resilience}, and \textbf{transcendence}. Brown’s
+executive functioning model~\cite{nigg2005} identifies six corresponding
+impairment dimensions: \textbf{activation}, \textbf{concentration},
+\textbf{effort}, \textbf{emotion}, \textbf{memory}, and \textbf{execution}.
+The six dimensions within this model map one-to-one onto the six positive
+themes, a structural correspondence arising from shared neural substrates: the
+same brain regions and networks that produce each executive impairment also
+generate the corresponding cognitive
+strength~\cite{castellanos2002,valera2007,nakao2011,durston2004}. Each
+strength is therefore a principled, neurologically grounded compensatory
+advantage for its paired deficit. The six pairings and their neural bases are
+as follows.
+
+\textbf{Cognitive Vitality vs.\ Concentration.}
+Cognitive vitality describes the continuous mental activity, spontaneous
+non-sequential thinking, vivid imagery, and intense internal focus often
+associated with ADHD~\cite{stine2008,ammaniti2013}. These characteristics may
+be linked to the default mode network (DMN), which supports internally oriented
+processes such as self-reflection, memory, imagination, and future thinking, but
+is typically suppressed during externally focused tasks~\cite{sestieri2011}.
+From a neurodiversity perspective, altered DMN dynamics---particularly reduced
+suppression during external tasks---can be understood as having two interrelated
+aspects: they may support creativity, curiosity, divergent thinking, and rapid
+associations, while also competing with the attention required to sustain and
+complete external tasks. \textbf{Design implication:} rather than suppressing
+internal ideation, design can use these cognitive strengths as entry points for
+redirecting attention towards externally required tasks~\cite{mole2022}.
+
+\textbf{Courage vs.\ Emotion.}
+Courage describes how some people with ADHD confront fear and uncertainty
+through non-conformity, risk-taking, integrity, persistence, and
+self-determination~\cite{williams2008}. These characteristics may be associated
+with differences in the amygdala and ventral striatum, which contribute to
+emotional processing, reward anticipation, and behavioural
+motivation~\cite{plessen2006,plichta2014}. From a neurodiversity perspective,
+this variation in emotion and reward processing can be understood as having two
+interrelated aspects: heightened sensitivity to negative stimuli and reduced
+responsiveness to delayed rewards may contribute to emotional reactivity,
+impulsivity, and avoidance of distant outcomes, while responsiveness to
+immediate or personally meaningful rewards may support rapid decision-making,
+persistence, and willingness to act~\cite{du2006,knutson2001}.
+\textbf{Design implication:} design can channel courage through immediate,
+positively framed actions and short-term rewards to reduce procrastination,
+while recognising that these strategies do not directly address emotional
+outbursts.
+
+\textbf{Energy vs.\ Activation.}
+Energy describes the willpower and sustained drive that some people with ADHD
+experience when pursuing personally meaningful goals, often accompanied by a
+strong sense of purpose~\cite{schippers2022}. These characteristics may be
+associated with differences in the balance between the dorsal attention network
+(DAN), which supports goal-directed attention, and the ventral attention network
+(VAN), which supports the flexible reorientation of
+attention~\cite{corbetta2002}. From a neurodiversity perspective, this
+variation in attention regulation can be understood as having two interrelated
+aspects: it may enable intense engagement and hyperfocus when a task is
+personally meaningful, while also making it difficult to shift attention,
+initiate less stimulating tasks, and organise competing priorities.
+\textbf{Design implication:} design can connect required tasks to personally
+meaningful goals, using purpose and intrinsic motivation to support task
+activation and prioritisation.
+
+\textbf{Humanity vs.\ Execution.}
+In this framework, humanity describes a positive core theme reported by some
+people with ADHD, encompassing social intelligence, humour, self-acceptance,
+empathy, and emotional awareness in social interactions. These characteristics
+may involve social-cognitive and affective processes associated with the mirror
+neuron system, which supports the perception and internal representation of
+others’ actions and emotions~\cite{humphrey1976,salovey1990}. From a
+neurodiversity perspective, variation in social and emotional processing among
+some people with ADHD can be understood as having two interrelated aspects: it
+may support strong empathy, positive emotional expression, and social
+connection, while also contributing to difficulties interpreting others’
+responses and adapting behaviour when an interaction becomes uncertain or
+negative. \textbf{Design implication:} design can use supportive social
+interaction and positive emotional expression to sustain engagement, while
+recognising that additional guidance may be needed to support behavioural
+adaptation.
+
+\textbf{Resilience vs.\ Effort.}
+In this framework, resilience describes a positive core theme reported by some
+people with ADHD, encompassing self-regulation, self-protection, and behavioural
+adaptation under adverse conditions~\cite{garmezy1971}. These processes may
+involve the anterior cingulate cortex, which contributes to cognitive control,
+conflict monitoring, and behavioural regulation~\cite{carter2007}. From a
+neurodiversity perspective, variation in effort regulation among some people
+with ADHD can be understood as having two interrelated aspects: it may support
+adaptive coping and behavioural adjustment in response to adversity, while
+sustained demands for self-control may also lead to mental fatigue and reduced
+capacity to maintain effort, described in this literature as ego
+depletion~\cite{baumeister2000}. \textbf{Design implication:} design should
+support resilience through flexible and optional coping strategies integrated
+with other forms of task support, rather than treating self-regulation as a
+stand-alone or compulsory solution.
+
+\textbf{Transcendence vs.\ Memory.}
+In this framework, transcendence describes a positive core theme reported by
+some people with ADHD, encompassing intense appreciation of beauty and
+excellence, particularly in music and other artistic experiences, together with
+feelings of awe, wonder, and deep absorption~\cite{martinez2016,shiota2006}.
+These characteristics may involve working-memory processes associated with
+corticocerebellar networks and noradrenergic modulation. From a neurodiversity
+perspective, variation in memory and experiential processing among some people
+with ADHD can be understood as having two interrelated aspects: emotionally and
+aesthetically meaningful experiences may promote deep engagement and memorable
+encoding, while information lacking personal, emotional, or sensory salience may
+be more difficult to retain and recall. \textbf{Design implication:} design can
+use aesthetically engaging and personally meaningful representations to support
+the encoding and recall of task-related information, while recognising that
+aesthetic engagement alone may not address all working-memory difficulties.
+
+\section{Interaction Design Principles}
+
+The inherent mental model of people with ADHD is largely negative---``I need to
+be managed’’---a framing reinforced by existing deficit-oriented
+tools~\cite{harpin2016}. This raises the question of how a tool might instead
+reshape that model with positive elements. To explore this, we examined existing
+research on mental models and mobile interface design. Mental
+models---abstract cognitive structures through which users interpret and predict
+an application~\cite{rook1993}---are central to user-centred
+design~\cite{ruiz2021}. Research shows that visual, symbolic, and pictorial
+design elements are the primary medium through which mental models are
+conceptualised~\cite{goldschmidt2007,ourusoff1985}, and that structuring
+information around action-relevant schemas supports effective retrieval and
+application~\cite{ruggles1998}. A systematic review of 257 widely cited UI
+design principles identifies six core guidelines: providing informative
+feedback, minimising memory load, clear error messages, providing shortcuts,
+using natural language, and using real-world metaphors~\cite{ruiz2021}. These
+findings confirm that a user’s mental model can be actively reshaped through
+design. Grounded in the neurodiversity framework above and guided by these
+principles, we proceeded to design a strength-based task management tool.
 
 \section{Design}
 
