@@ -1,6 +1,6 @@
 %%
 %% ASSETS Poster Extended Abstract
-%% PP Application: Task Management for ADHD via Cognitive Strengths
+%% StrengthFlow: Task Management for ADHD via Cognitive Strengths
 %%
 \documentclass[sigconf]{acmart}
 
@@ -18,7 +18,7 @@
 
 \begin{document}
 
-\title[PP: ADHD Task Management via Cognitive Strengths]{StrengthFlow: A Strength-Based Task Management Application for Adults with ADHD}
+\title[StrengthFlow: ADHD Task Management via Cognitive Strengths]{StrengthFlow: A Strength-Based Task Management Application for Adults with ADHD}
 
 \author{Jingyu Lei}
 \affiliation{%
@@ -81,40 +81,44 @@ abnormal~\cite{sedgwick2019}. A person with ADHD experiences deficits in
 cognitive control, sensitivity to rewards, and time perception, while
 simultaneously displaying high energy, creativity, hyperfocus, empathy, and
 willingness to help others. The core deficit is \emph{executive dysfunction}
-\cite{nigg2005}---a broad range of top-down cognitive processes enabling
-flexible, goal-directed behaviour---which significantly affects the daily social
-activities of adults with ADHD.
+\cite{nigg2005}---a broad range of top-down cognitive processes and abilities
+that enable flexible, goal-directed behaviour~\cite{miyake2000}---which
+significantly affects the daily social activities of adults with ADHD.
 
-Current psychosocial interventions include digital apps that assist with task
-execution. A systematic review of 355 app-related studies found that the
-majority of effectiveness outcomes were negative~\cite{pasarelu2020}: benefits
-did not persist after the intervention period, and users reported increased
-anxiety when separated from the tool. More critically, these control-oriented
-tools reinforce the negative mental model that ``I need to be managed,''
-undermining self-esteem.
+Current approaches to alleviating executive symptoms include traditional
+medications---whose global market continues to grow~\cite{scheffler2007}---and
+behavioural therapies; however, they cannot maintain long-term symptom relief
+and have severe limitations in terms of side effects~\cite{enriquez2019},
+making psychosocial interventions a necessary complement~\cite{safren2006}. One widely adapted psychosocial tool is the
+digital application. A systematic review of 355 app-related studies found that
+most effectiveness outcomes were negative~\cite{pasarelu2020}: poor outcomes
+were not maintained long after the intervention~\cite{gajecki2014}, and users
+reported more severe anxiety when separated from the tool~\cite{torous2016}.
+More critically, these control-oriented tools reinforce the negative mental
+model that ``I need to be managed,'' undermining self-esteem.
 
 Brown's model of ADHD executive functioning identifies six impairment
 dimensions---activation, concentration, effort, emotion, memory, and
 execution. A complementary qualitative study defines six positive core themes in
 ADHD: \textit{cognitive vitality}, \textit{courage}, \textit{energy},
 \textit{humanity}, \textit{resilience}, and \textit{transcendence}
-\cite{schippers2022}. The PP application maps each strength to its corresponding
-impairment and designs an interaction module that activates the strength to
-naturally redirect attention toward the required task.
+\cite{schippers2022}. StrengthFlow maps each cognitive strength to its
+corresponding executive challenge and implements an interaction module that
+activates the strength to support task engagement.
 
 \section{Related Works}
 
 The neurodiversity of executive functions in ADHD is concentrated in four brain
 regions: the prefrontal cortex, the basal ganglia, the cerebellum, and the
 parietal-temporal region, operating through the reticular activating
-system~\cite{castellanos2002,valera2007}. These regions cannot be categorised
-independently; they form a dynamic, integrated management process in which
-executive processing depends on coordinated activity across multiple cognitive
-components. This section analyses that neurodiversity by (i)~examining the
+system~\cite{castellanos2002,valera2007,nakao2011,durston2004}. These regions
+cannot be categorised independently; they form a dynamic, integrated management
+process in which executive processing depends on coordinated activity across
+multiple cognitive components. This section analyses that neurodiversity by (i)~examining the
 neural connections through which positive and negative characteristics can be
 interchanged, (ii)~reviewing functional modules of existing ADHD management
 applications, and (iii)~reviewing the interaction design principles required for
-mobile application development. All three inform the PP prototype.
+mobile application development. All three inform the StrengthFlow prototype.
 
 \subsection{Research Overview}
 
@@ -134,23 +138,38 @@ strength is therefore a principled, neurologically grounded compensatory tool
 for its paired deficit. The six pairings and their neural bases are as follows.
 
 \textbf{Cognitive Vitality vs.\ Concentration.}
-Cognitive vitality summarises the uninterrupted mental activity, spontaneous
-non-sequential thought, and intense internal concentration characteristic of
-ADHD. The corresponding neural system is the brain's default mode network
-(DMN), which is negatively activated during external attention tasks and
-positively activated during internal tasks related to self, memory, and future
-vision~\cite{sestieri2011}. In ADHD the DMN remains persistently active,
+Cognitive vitality---defined as the perception of an intensely pleasurable
+self-experience as an effective agent of change that, through its intervention,
+can rapidly alter the course of events~\cite{stine2008,ammaniti2013}---summarises
+the uninterrupted mental activity, spontaneous non-sequential thought processes,
+and intense internal concentration characteristic of ADHD. The corresponding
+neural system is the brain's default mode network (DMN), which is negatively
+activated during external attention tasks and positively activated during
+internal tasks related to the self, moral judgements, situational memories, and
+future visions~\cite{sestieri2011}. In ADHD the DMN remains persistently active,
 producing the inability to focus on external tasks for long periods while
-simultaneously preventing disengagement from internal ideation. \textit{Design implication:} Divergent thinking, creativity, and curiosity may provide alternative entry points for redirecting attention from internally generated thoughts towards externally required tasks..
+simultaneously preventing disengagement from internal ideation.
+\textit{Design implication:} The cognitive dynamism of divergent thinking,
+creativity, curiosity, and a quick knowledge base may serve as a management
+tool~\cite{mole2022}, providing alternative entry points for redirecting
+attention from internally generated thoughts towards externally required tasks.
 
 \textbf{Courage vs.\ Emotion.}
 Courage summarises how people with ADHD face fears and deal with uncertainty
-through non-conformity, risk-taking, and the drive for individualisation. The
-neural system involved is the amygdala (over-activated in ADHD, including
-dopamine receptor density) in conjunction with the ventral striatum
-(under-activated)~\cite{knutson2001}. This produces emotional impulsivity,
-inadequate self-regulation, and aversive responses to long-term reward
-anticipation. \textit{Design implication:} Sensitivity to uncertainty, novelty, and immediate rewards suggests that task engagement may be supported through positively framed, short-horizon actions rather than distant or aversive outcomes..
+through non-conformity, risk-taking, and the drive for individualisation.
+The neural system involved is the amygdala (over-activated in ADHD, with
+altered dopamine receptor density and reduced hippocampal and amygdala
+volume~\cite{plessen2006}) in conjunction with the ventral striatum
+(under-activated, showing reduced responsiveness during reward
+anticipation~\cite{plichta2014,knutson2001}). Event-related potential studies
+confirm deficits in early emotional and inhibitory processing in
+ADHD~\cite{du2006}, and behavioural evidence indicates that individuals with
+ADHD systematically misinterpret emotional expressions~\cite{williams2008}.
+This produces emotional impulsivity, inadequate self-regulation, and aversive
+responses to long-term reward anticipation.
+\textit{Design implication:} Sensitivity to uncertainty, novelty, and immediate
+rewards suggests that task engagement may be supported through positively
+framed, short-horizon actions rather than distant or aversive outcomes.
 
 \textbf{Energy vs.\ Activation.}
 Energy summarises the psycho-energetic willpower motivated by a strong desire to
@@ -163,42 +182,56 @@ Yet hyper-focus emerges when an ambitious personal goal is present.
 \textit{Design implication:} Because task engagement may increase when activities are connected to personally meaningful goals, design should emphasise purpose and personal significance rather than relying solely on conventional priority ordering.
 
 \textbf{Humanity vs.\ Execution.}
-Humanity summarises social intelligence, humour, self-acceptance, and empathy
-in social behaviour. Mirror neurons produce strong empathic resonance and
-positive emotional contagion but also difficulty adapting behaviour when
-others are puzzled or upset. \textit{Design implication:} Empathy, humour, and social connectedness may be used to support positive affect and sustained engagement, although social motivation alone may not be sufficient to guide task execution..
+Humanity summarises social intelligence~\cite{humphrey1976}, humour,
+self-acceptance, and emotional intelligence~\cite{salovey1990} in social
+behaviour. Mirror neurons produce strong empathic resonance and positive
+emotional contagion but also difficulty adapting behaviour when others are
+puzzled or upset.
+\textit{Design implication:} Empathy, humour, and social connectedness may be
+used to support positive affect and sustained engagement, although social
+motivation alone may not be sufficient to guide task execution.
 
 \textbf{Resilience vs.\ Effort.}
-Resilience describes how people with ADHD self-regulate and self-protect under
-adverse conditions through behavioural adjustment strategies. The anterior
-cingulate cortex drives cognitive control and behavioural monitoring, but ego
-depletion under antagonistic conflict leads to mental fatigue and ineffective
-sustained self-regulation~\cite{carter2007}. \textit{Design implication:}
-Adaptive coping strategies should be supported as flexible and optional resources that users can draw upon during periods of cognitive fatigue, rather than as fixed or compulsory procedures.
+Resilience---the capacity for positive adaptation despite adversity~\cite{garmezy1971}---
+manifests in ADHD as self-protection and behavioural adjustment under adverse
+conditions. The anterior cingulate cortex drives cognitive control and
+behavioural monitoring~\cite{carter2007}, but ego depletion---the gradual
+exhaustion of limited self-regulatory resources under antagonistic
+conflict~\cite{baumeister2000}---leads to mental fatigue and ineffective
+sustained self-regulation.
+\textit{Design implication:} Adaptive coping strategies should be supported as
+flexible and optional resources that users can draw upon during periods of
+cognitive fatigue, rather than as fixed or compulsory procedures.
 
 \textbf{Transcendence vs.\ Memory.}
 Transcendence describes the rapid aesthetic absorption---awe, wonder, and deep
 memorisation---that people with ADHD experience, particularly with music and
-art. The corticocerebellar network with norepinephrine underpins working memory;
-in ADHD, internal norepinephrine links are weakened, yet high absorption during
-aesthetic experiences produces deep encoding~\cite{shiota2006}.
-\textit{Design implication:} Aesthetic engagement and deep absorption may support the encoding and retention of task-related information, suggesting value in visually or emotionally meaningful forms of representation.
+art. Research on the appreciation of beauty and excellence shows that aesthetic
+engagement is associated with well-being and positive character
+strengths~\cite{martinez2016}. The corticocerebellar network with norepinephrine
+underpins working memory; in ADHD, internal norepinephrine links are weakened,
+yet high absorption during aesthetic experiences produces deep
+encoding~\cite{shiota2006}.
+\textit{Design implication:} Aesthetic engagement and deep absorption may
+support the encoding and retention of task-related information, suggesting value
+in visually or emotionally meaningful forms of representation.
 
 \subsection{Mobile Tools Research}
 
 \subsubsection{User Interaction Design.}
-Mental models are the key to user-centred design~\cite{ruiz2021}. A mental
-model is a person's abstract concept of a device that enables them to interpret
-and predict an application. Research shows that graphical interfaces outperform
-text-only representations, and that visual, symbolic, and pictorial design
-elements are the primary medium through which mental models are
-conceptualised. From a systematic review of 257 widely cited UI design
-principles, six core guidelines were identified: providing informative feedback,
-minimising memory load, clear error messages, providing shortcuts, using natural
-language, and using real-world metaphors~\cite{ruiz2021}. The inherent mental
-model of people with ADHD is largely negative (``I need to be managed''); PP's
-framework must extend this model with positive elements through a virtuous-circle
-design logic.
+Mental models---abstract cognitive structures through which users interpret and
+predict an application~\cite{rook1993}---are the key to user-centred
+design~\cite{ruiz2021}. Visual, symbolic, and pictorial design elements are the
+primary medium through which mental models are conceptualised~\cite{goldschmidt2007,ourusoff1985},
+and knowledge management frameworks suggest that structuring information around
+action-relevant schemas supports effective retrieval and
+application~\cite{ruggles1998}. From a systematic review of 257 widely cited UI
+design principles, six core guidelines were identified: providing informative
+feedback, minimising memory load, clear error messages, providing shortcuts,
+using natural language, and using real-world metaphors~\cite{ruiz2021}. The
+inherent mental model of people with ADHD is largely negative (``I need to be
+managed''); StrengthFlow's framework must extend this model with positive
+elements through a virtuous-circle design logic.
 
 \subsubsection{Interactive Modules.}
 A review of 22 representative ADHD management applications (10,000--50,000
@@ -248,7 +281,7 @@ deficit-correction posture that reinforces the negative mental model that the
 user is a problem to be managed. This gap motivates the strength-based design
 framework presented in Section~3, which translates the six cognitive
 strength--executive challenge pairings into abstract design principles as the
-conceptual foundation for PP.
+conceptual foundation for StrengthFlow.
 
 \section{User Group and Requirements}
 
@@ -260,14 +293,14 @@ recognition of them. A review of 127 ADHD studies found that 29\% of treated and
 56\% of untreated adults reported low self-esteem, and 38--73\% felt their social
 functioning was affected~\cite{harpin2016}.
 
-PP therefore targets two parallel needs: (1)~social recognition and affirmation
-of ADHD strengths; and (2)~support for executive skill and self-esteem through
-positive engagement rather than coercion.
+StrengthFlow therefore targets two parallel needs: (1)~social recognition and
+affirmation of ADHD strengths; and (2)~support for executive skill and
+self-esteem through positive engagement rather than coercion.
 
 \section{Design}
 
-PP translates each of the six cognitive strength--executive challenge pairings
-identified in Section~2 into a concrete interaction module. Table~\ref{tab:framework}
+StrengthFlow translates each of the six cognitive strength--executive challenge
+pairings identified in Section~2 into a concrete interaction module. Table~\ref{tab:framework}
 presents the framework as a whole, mapping each pairing to its associated neural
 basis and derived design principle. The subsections below describe the resulting
 modules in detail.
@@ -328,9 +361,10 @@ modules in detail.
 
 \subsection{Module Logic}
 
-PP implements one interaction module per pairing. Each description below
-follows the structure: \textit{executive challenge / cognitive strength /
-derived design principle / PP implementation / intended interaction outcome}.
+StrengthFlow implements one interaction module per pairing. Each description
+below follows the structure: \textit{executive challenge / cognitive strength /
+derived design principle / StrengthFlow implementation / intended interaction
+outcome}.
 
 \textbf{Concentration module (Cognitive Vitality / Concentration).}
 \textit{Executive challenge:} Difficulty sustaining attention on external tasks
@@ -338,7 +372,7 @@ due to persistent internal ideation.
 \textit{Cognitive strength:} Spontaneous, non-sequential divergent thinking.
 \textit{Derived design principle:} Use divergent thinking as an entry point for
 redirecting attention toward externally required tasks.
-\textit{PP implementation:} Users are presented with a set of randomly generated
+\textit{StrengthFlow implementation:} Users are presented with a set of randomly generated
 visual or verbal prompts and asked to produce a creative response that connects
 those prompts to the task they need to complete.
 \textit{Intended interaction outcome:} Creative engagement acts as a bridge
@@ -352,7 +386,7 @@ working memory.
 encoding during experiences of wonder or beauty.
 \textit{Derived design principle:} Use visually or aesthetically meaningful
 representations of task-related information to support encoding and retention.
-\textit{PP implementation:} Users enter key task information before an
+\textit{StrengthFlow implementation:} Users enter key task information before an
 aesthetically rich interactive activity; each item is embedded within a visually
 engaging display and remains retrievable on demand throughout the activity.
 \textit{Intended interaction outcome:} Aesthetic engagement during task entry
@@ -367,7 +401,7 @@ social identity.
 \textit{Derived design principle:} Use social connectedness and positive
 emotional expression to support sustained engagement during routine task
 execution.
-\textit{PP implementation:} Ongoing habits and responsibilities are represented
+\textit{StrengthFlow implementation:} Ongoing habits and responsibilities are represented
 as planets in a personal solar-system visualisation; completing each
 responsibility illuminates the corresponding planet, building a positive
 social-identity narrative.
@@ -381,7 +415,7 @@ anticipation, producing emotional impulsivity and procrastination.
 risk-taking under short-horizon conditions.
 \textit{Derived design principle:} Support task engagement through positively
 framed, short-horizon actions that replace aversive or distant outcomes.
-\textit{PP implementation:} Long-term tasks are decomposed into short-term
+\textit{StrengthFlow implementation:} Long-term tasks are decomposed into short-term
 sub-tasks, each associated with an immediate positive reward upon completion.
 \textit{Intended interaction outcome:} Short-horizon reward cycles reduce
 procrastination by replacing aversive delay with achievable, immediate goals.
@@ -394,7 +428,7 @@ something personally meaningful; hyper-focus in the presence of an ambitious
 personal goal.
 \textit{Derived design principle:} Connect tasks to personally meaningful goals
 and higher-order purposes to support willpower and task initiation.
-\textit{PP implementation:} Users adopt a chosen role or persona associated with
+\textit{StrengthFlow implementation:} Users adopt a chosen role or persona associated with
 a self-determined narrative and complete priority tasks within that imaginative
 context, anchoring task execution in personal meaning.
 \textit{Intended interaction outcome:} Embedding the priority task within a
@@ -408,7 +442,7 @@ mental fatigue under cognitive load.
 adjustment under adverse conditions.
 \textit{Derived design principle:} Offer adaptive coping strategies as flexible
 and optional resources during periods of cognitive fatigue.
-\textit{PP implementation:} When in a positive affective state, users are
+\textit{StrengthFlow implementation:} When in a positive affective state, users are
 offered social-expression options; when in a negative state, a set of
 positive-thinking and guided-reflection resources is available.
 \textit{Intended interaction outcome:} Mood-contingent branching supports coping
@@ -425,8 +459,9 @@ rather than a sequential schedule.
 
 \subsection{Visual Design Principles}
 
-People with ADHD have heightened visuospatial processing sensitivity. The PP
-interface therefore uses: non-repetitive, non-patterned layouts; vivid colours
+People with ADHD have heightened visuospatial processing sensitivity. The
+StrengthFlow interface therefore uses: non-repetitive, non-patterned layouts;
+vivid colours
 associated with high energy and positivity; irregular icon shapes that echo
 creativity and divergent thinking; and aesthetically distinctive artwork within
 task modules. The UI adheres to six empirically validated core principles:
@@ -448,18 +483,18 @@ Preliminary evaluation was conducted with three anonymous adults with ADHD.
 Positive feedback: the application is engaging and the colour palette
 successfully attracts and holds attention. Critical finding: in noisy external
 environments (e.g.\ commuting), ambient auditory distractions competed with the
-visual engagement. As a result, the next iteration of PP will integrate
-background music and sound effects. Prior research shows that neurofeedback audio
+visual engagement. As a result, the next iteration of StrengthFlow will integrate background
+music and sound effects. Prior research shows that neurofeedback audio
 protocols are a well-established adjunctive treatment for ADHD~\cite{enriquez2019},
 providing a principled basis for this extension.
 
 \section{Conclusion}
 
-PP is, to our knowledge, the first mobile task-management application grounded
-in a strength-based neurodiversity framework for ADHD. Rather than relying on
-reminders, timers, or behavioural correction, PP positions each cognitive
-strength as a conceptual basis for an interaction module that addresses the
-corresponding executive challenge. The underlying design approach is replicable:
+StrengthFlow is, to our knowledge, the first mobile task-management application
+grounded in a strength-based neurodiversity framework for ADHD. Rather than
+relying on reminders, timers, or behavioural correction, StrengthFlow positions
+each cognitive strength as a conceptual basis for an interaction module that
+addresses the corresponding executive challenge. The underlying design approach is replicable:
 identify a cognitive strength and its associated executive challenge in the
 literature, derive an abstract design principle from that pairing, and implement
 a concrete interaction that instantiates the principle without imposing
@@ -467,9 +502,9 @@ deficit-oriented constraints.
 
 Limitations include a small user testing sample (N\,=\,3) and limited coverage of
 users with deafblindness. Future work will expand evaluation and incorporate
-neurofeedback technology as wireless EEG device costs continue to fall. Beyond
-task management, PP aims to shift the mental model of ADHD from ``I need to be
-managed'' to one that affirms capability and positive identity.
+neurofeedback technology as wireless EEG device costs continue to fall. Beyond task management, StrengthFlow aims to shift the mental model of ADHD
+from ``I need to be managed'' to one that affirms capability and positive
+identity.
 
 \begin{acks}
 The author thanks the three anonymous ADHD participants who provided user testing
