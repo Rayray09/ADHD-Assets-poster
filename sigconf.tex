@@ -320,7 +320,7 @@ principles, we proceeded to design a strength-based task management tool.
 
 The design process proceeded in three stages. First, the six strength--deficit
 neural pairings established in Section~2.1 were each translated into an abstract
-design principle, forming a theoretical framework (Table~\ref{tab:framework}).
+design principle, forming a theoretical framework.
 Second, each principle was instantiated as a concrete interaction module,
 producing six distinct engagement mechanisms. Third, these modules were composed
 into a unified workflow and a consistent visual design system, with an aesthetic
@@ -328,60 +328,6 @@ language chosen to itself reinforce the strength-based mental model. The
 resulting application was named \textbf{StrengthFlow}---reflecting the core
 design intent: to channel each cognitive strength into structured, purposeful
 task engagement. The subsections below describe each stage in detail.
-
-\begin{table*}
-  \caption{Strength-based design framework: cognitive strengths, executive
-    challenges, associated neural basis, and derived design principles.}
-  \label{tab:framework}
-  \begin{tabular}{p{0.10\linewidth} p{0.12\linewidth} p{0.22\linewidth} p{0.44\linewidth}}
-    \toprule
-    \textbf{Cognitive Strength} & \textbf{Executive Challenge} &
-    \textbf{Associated Neural Basis} & \textbf{Derived Design Principle} \\
-    \midrule
-    Cognitive Vitality &
-      Concentration &
-      Default Mode Network (associated with internal ideation; may remain
-        persistently active in ADHD during external tasks) &
-      Divergent thinking may serve as an entry point for redirecting attention
-        toward externally required tasks. \\
-    \addlinespace
-    Courage &
-      Emotion &
-      Amygdala and Ventral Striatum (associated with emotional regulation and
-        sensitivity to reward timing) &
-      Task engagement may be supported by positively framed, short-horizon
-        actions that replace aversive or distant outcomes. \\
-    \addlinespace
-    Energy &
-      Activation &
-      Dorsal Attention Network (associated with top-down goal-directed
-        attention; may produce hyper-focus under personally meaningful goals) &
-      Connecting tasks to personally meaningful goals and higher-order purposes
-        may support willpower and task initiation. \\
-    \addlinespace
-    Humanity &
-      Execution &
-      Mirror Neuron System (associated with empathic resonance and social
-        affect) &
-      Social connectedness and positive emotional expression may support
-        sustained engagement and positive affect during task execution. \\
-    \addlinespace
-    Resilience &
-      Effort &
-      Anterior Cingulate Cortex (associated with cognitive control;
-        self-regulation may be limited by ego depletion under conflict) &
-      Adaptive self-regulation strategies should be offered as flexible and
-        optional resources to support coping during cognitive fatigue. \\
-    \addlinespace
-    Transcendence &
-      Memory &
-      Corticocerebellar Network with Norepinephrine (associated with working
-        memory; aesthetic absorption may facilitate deep encoding) &
-      Visually or aesthetically meaningful representations of task-related
-        information may support encoding and retention. \\
-    \bottomrule
-  \end{tabular}
-\end{table*}
 
 \subsection{Module Logic}
 
@@ -431,12 +377,12 @@ design principle, implementation, and intended outcome.
 \textbf{Implementation:} Mood-contingent branching: in a positive state, the user expresses themselves through social connection---helping others, sharing feedback, or engaging with the community; in a negative state, positive-thinking resources such as meditation and guided reflection are offered.
 \textbf{Intended outcome:} Mood-contingent branching supports coping without imposing a fixed sequence, preserving agency during ego depletion.
 
-\begin{figure}[h]
+\begin{figure*}[t]
   \centering
-  \includegraphics[width=\linewidth]{"Module logic"}
+  \includegraphics[width=\textwidth]{"Module logic"}
   \caption{Module logic overview for StrengthFlow.}
   \label{fig:module-logic}
-\end{figure}
+\end{figure*}
 
 \subsection{Workflow}
 
