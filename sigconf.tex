@@ -390,7 +390,21 @@ The application workflow follows a non-linear model: users enter whichever
 module matches their current cognitive state rather than following a prescribed
 sequence. This respects the temporal experience of ADHD, in which time is
 perceived as a dispersed collection of events linked to people and emotions
-rather than a sequential schedule.
+rather than a sequential schedule. As illustrated in Figure~\ref{fig:workflow},
+the entry point is a unified home screen from which users can freely navigate
+to any of the six strength-based modules. Transitions between modules require
+no fixed order; users may switch at any point in response to their current
+cognitive or emotional state. This architecture avoids imposing a linear task
+queue---a design choice grounded in research showing that rigid sequential
+workflows increase cognitive load and reduce engagement for adults with
+ADHD~\cite{safren2006}.
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\textwidth]{Workflow.pdf}
+  \caption{StrengthFlow application workflow: non-linear navigation between the six strength-based modules from a unified home screen.}
+  \label{fig:workflow}
+\end{figure*}
 
 \subsection{Visual Design Principles}
 
