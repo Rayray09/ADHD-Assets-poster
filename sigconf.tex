@@ -44,12 +44,33 @@
 
 \renewcommand{\shortauthors}{Lei}
 
+
 \begin{abstract}
-ADHD is commonly framed through hyperactivity, impulsivity, inattention, and executive-function difficulties, while its associated cognitive strengths receive less attention. Existing task management applications for people with ADHD often rely on reminders, timers, and behavioural correction, potentially reinforcing deficit-orientated assumptions.
-
-This paper presents StrengthFlow, a strength-based task management application for adults with ADHD. It translates six ADHD-related cognitive strengths into design principles addressing challenges in activation, concentration, effort, emotion, memory, and task execution. A high-fidelity prototype was preliminarily evaluated with three adults with ADHD. Feedback indicated positive responses to its strength-based framing and visual design, while highlighting the need to better support use in distracting environments. StrengthFlow demonstrates how neurodiversity-informed design can promote capability, autonomy, and positive identity, reflecting the principle that “people with differences may not need a cure; they need help and accommodation.”
-
+ADHD is commonly framed through deficits in attention and executive function,
+while its associated strengths receive less recognition. Existing
+task-management applications often rely on reminders, timers, and behavioural
+correction, potentially reinforcing deficit-oriented assumptions. This poster
+presents StrengthFlow, a neurodiversity-informed, strength-based mobile
+task-management concept for adults with ADHD. Drawing on six
+literature-informed strength--challenge pairings, StrengthFlow translates
+cognitive vitality, courage, energy, humanity, resilience, and transcendence
+into six interaction modules supporting concentration, emotion, activation,
+execution, effort, and memory within a non-linear workflow. A high-fidelity
+prototype was formatively explored with three adults with ADHD. Participants
+described the prototype as engaging and reported that its colour palette
+attracted attention, while environmental noise could compete with its visually
+focused interaction. These preliminary findings guide further iteration rather
+than establish effectiveness. StrengthFlow contributes a replicable design
+approach for linking ADHD-related strengths to concrete interactions intended
+to support task engagement, autonomy, and positive identity.
 \end{abstract}
+
+
+% ADHD is commonly framed through hyperactivity, impulsivity, inattention, and executive-function difficulties, while its associated cognitive strengths receive less attention. Existing task management applications for people with ADHD often rely on reminders, timers, and behavioural correction, potentially reinforcing deficit-orientated assumptions.
+
+% This paper presents StrengthFlow, a strength-based task management application for adults with ADHD. It translates six ADHD-related cognitive strengths into design principles addressing challenges in activation, concentration, effort, emotion, memory, and task execution. A high-fidelity prototype was preliminarily evaluated with three adults with ADHD. Feedback indicated positive responses to its strength-based framing and visual design, while highlighting the need to better support use in distracting environments. StrengthFlow demonstrates how neurodiversity-informed design can promote capability, autonomy, and positive identity, reflecting the principle that “people with differences may not need a cure; they need help and accommodation.”
+
+% \end{abstract}
 
 \begin{CCSXML}
 <ccs2012>
@@ -102,7 +123,8 @@ self-esteem and 38--73\% reported impaired social functioning
 ~\cite{harpin2016}. These findings highlight the need to affirm ADHD strengths while providing positive, non-coercive support.
 
 Existing ADHD applications remain largely deficit-oriented, with limited
-evidence of effectiveness~\cite{pasarelu2020}. To examine current design approaches, we conducted an exploratory analysis of 22 representative ADHD management applications selected based on \textit{[INSERT ACTUAL SELECTION CRITERIA: e.g.\ target users, app function categories, platform, download range, availability]}~\cite{pasarelu2020}. Most relied on reminders, timers, and behavioural prompts, while strength-aligned features remained fragmented
+evidence of effectiveness~\cite{pasarelu2020}. To examine current design approaches, we conducted an exploratory analysis of
+22 digital management tools with 10,000--50,000 downloads and classified their modules according to whether they leveraged ADHD-related strengths. Most relied on reminders, timers, and behavioural prompts, while strength-aligned features remained fragmented
 (Table~\ref{tab:apps}). This gap motivated \textit{StrengthFlow}.
 
 
@@ -180,54 +202,104 @@ Strength-aligned \\
 \end{tabularx}
 \end{table}
 
-\section{Neurodiversity Framework: Strengths and Executive Challenges}
 
-The neurodiversity of executive function in ADHD involves four interconnected
-brain regions: the prefrontal cortex, basal ganglia, cerebellum, and parietal-temporal regions, operating through the reticular activating system~\cite{castellanos2002,valera2007,nakao2011,durston2004}. These regions
-do not function independently, but form a dynamic and integrated system. The same underlying processes may produce different outcomes across contexts,
-contributing to an executive difficulty in one situation while supporting a
-cognitive strength in another. Based on this perspective, this section examines the six dimensions of executive-function difficulty proposed by Brown~\cite{brown2005}---activation, concentration, effort, emotion, memory, and execution---alongside six positive ADHD-related characteristics identified by Schippers et al.~\cite{schippers2022} and Sedgwick et al.~\cite{sedgwick2019}, and explores whether these pairings can provide a logical framework
-for mobile application modules.
 
-First, \textbf{Concentration Difficulty and Cognitive Vitality} in ADHD are
-associated with internally directed mental activity and the default mode
-network~\cite{ammaniti2013,stine2008,sestieri2011}. Continued internal
-thought can disrupt sustained attention to external tasks; however, it can also
-support vivid imagery, rapid associations, curiosity, creativity, and divergent
-thinking~\cite{mole2022}. Second, \textbf{Emotional Dysregulation and Courage}
-are associated with emotional and reward processing in the amygdala and ventral
-striatum~\cite{williams2008,plessen2006,plichta2014}. Heightened emotional
-reactivity and reduced responsiveness to delayed rewards can contribute to
-impulsive decisions and procrastination; however, responsiveness to immediate
-or personally meaningful outcomes can support rapid action, risk-taking, and
-persistence~\cite{du2006,knutson2001}. Third, \textbf{Activation Difficulty
-and Energy} are associated with the balance between goal-directed and
+\section{Neurodiversity Framework: Strength and Challenge Pairings}
+
+
+Executive function in ADHD depends on coordinated activity across
+interconnected brain regions and neural networks
+~\cite{castellanos2002,durston2004,nakao2011,valera2007}. Some ADHD-related
+difficulties and strengths may involve overlapping cognitive processes, but
+their relationships have not been established as one-to-one neurological
+correspondences.
+
+Brown identifies six clusters of executive-function impairment: activation,
+focus, effort, emotion, memory, and action~\cite{brown2008}. This paper refers
+to focus and action as concentration and execution, respectively. Schippers
+et al.\ and Sedgwick et al.\ identify six positive ADHD-related themes:
+energy, cognitive vitality, resilience, courage, transcendence, and humanity
+~\cite{schippers2022,sedgwick2019}. Combining these two bodies of research, we
+propose six literature-informed pairings as a conceptual framework for design.
+
+First, \textbf{concentration difficulty and cognitive vitality} relate to
+internally directed activity and the default mode network
+~\cite{ammaniti2013,stinemorrow2008,sestieri2011}. Internal thought may disrupt
+external attention; however, it can also support imagination, creativity, and
+divergent thinking~\cite{mole2022}. Second, \textbf{emotional dysregulation
+and courage} relate to emotional and reward processing in the amygdala and
+ventral striatum~\cite{williams2008,plessen2006,plichta2014}. Emotional
+reactivity and reduced responsiveness to delayed rewards may contribute to
+impulsivity and procrastination; however, immediate or meaningful outcomes
+can support rapid action and persistence~\cite{du2006,knutson2001}. Third,
+\textbf{activation difficulty and energy} relate to goal-directed and
 stimulus-driven attention~\cite{corbetta2002}. Difficulty shifting attention
-can delay task initiation, prioritisation, and switching; however, personally
-meaningful goals can generate strong motivation, sustained engagement, and
-hyperfocus~\cite{schippers2022}. Fourth, \textbf{Behavioural Adaptation
-Difficulty and Humanity} are associated with social-cognitive and emotional
-processes involved in recognising and responding to others
-~\cite{humphrey1976,salovey1990}. Difficulty interpreting changing social cues
-can hinder behavioural adjustment; however, sensitivity to others can support
-empathy, humour, positive emotional expression, and social connection. Fifth,
-\textbf{Sustained-Effort Difficulty and Resilience} are associated with
-conflict monitoring and behavioural regulation involving the anterior
-cingulate cortex~\cite{garmezy1971,carter2007}. Prolonged cognitive control can
-cause mental fatigue and reduce sustained effort; however, the same regulatory
-processes can support coping, self-regulation, and behavioural adaptation
-~\cite{baumeister2000}. Finally, \textbf{Working-Memory Difficulty and
-Transcendence} are associated with the processing of emotionally,
-aesthetically, and personally salient experiences. Ordinary or low-salience
-task information can be difficult to retain and retrieve; however, meaningful
-experiences can promote deep absorption and stronger memory encoding
+may delay task initiation; however, meaningful goals can generate motivation
+and hyperfocus~\cite{schippers2022}. Fourth, \textbf{behavioural adaptation
+difficulty and humanity} relate to social and emotional processing
+~\cite{humphrey1976,salovey1990}. Changing social cues may hinder behavioural
+adjustment; however, sensitivity to others can support empathy and social
+connection. Fifth, \textbf{sustained-effort difficulty and resilience} relate
+to conflict monitoring and behavioural regulation involving the anterior
+cingulate cortex~\cite{garmezy1971,carter2007}. Prolonged control may cause
+mental fatigue; however, the same capacity can support coping and adaptation
+~\cite{baumeister2000}. Finally, \textbf{working-memory difficulty and
+transcendence} relate to emotionally, aesthetically, and personally salient
+information. Low-salience information may be difficult to retain; however,
+meaningful experiences can support absorption and stronger encoding
 ~\cite{martinez2016,shiota2006}.
 
-Together, these relationships form six ADHD strength--challenge pairings:
-cognitive vitality--concentration, courage--emotion, energy--activation,
-humanity--execution, resilience--effort, and transcendence--memory. These
-pairings provide the conceptual basis for the six interaction modules
+These six pairings provide the conceptual basis for the interaction modules
 developed in Section~4.
+
+
+
+% The neurodiversity of executive function in ADHD involves four interconnected
+% brain regions: the prefrontal cortex, basal ganglia, cerebellum, and parietal-temporal regions, operating through the reticular activating system~\cite{castellanos2002,valera2007,nakao2011,durston2004}. These regions
+% do not function independently, but form a dynamic and integrated system. The same underlying processes may produce different outcomes across contexts,
+% contributing to an executive difficulty in one situation while supporting a
+% cognitive strength in another. Based on this perspective, this section examines the six dimensions of executive-function difficulty proposed by Brown~\cite{brown2005}---activation, concentration, effort, emotion, memory, and execution---alongside six positive ADHD-related characteristics identified by Schippers et al.~\cite{schippers2022} and Sedgwick et al.~\cite{sedgwick2019}, and explores whether these pairings can provide a logical framework
+% for mobile application modules.
+
+% First, \textbf{Concentration Difficulty and Cognitive Vitality} in ADHD are
+% associated with internally directed mental activity and the default mode
+% network~\cite{ammaniti2013,stine2008,sestieri2011}. Continued internal
+% thought can disrupt sustained attention to external tasks; however, it can also
+% support vivid imagery, rapid associations, curiosity, creativity, and divergent
+% thinking~\cite{mole2022}. Second, \textbf{Emotional Dysregulation and Courage}
+% are associated with emotional and reward processing in the amygdala and ventral
+% striatum~\cite{williams2008,plessen2006,plichta2014}. Heightened emotional
+% reactivity and reduced responsiveness to delayed rewards can contribute to
+% impulsive decisions and procrastination; however, responsiveness to immediate
+% or personally meaningful outcomes can support rapid action, risk-taking, and
+% persistence~\cite{du2006,knutson2001}. Third, \textbf{Activation Difficulty
+% and Energy} are associated with the balance between goal-directed and
+% stimulus-driven attention~\cite{corbetta2002}. Difficulty shifting attention
+% can delay task initiation, prioritisation, and switching; however, personally
+% meaningful goals can generate strong motivation, sustained engagement, and
+% hyperfocus~\cite{schippers2022}. Fourth, \textbf{Behavioural Adaptation
+% Difficulty and Humanity} are associated with social-cognitive and emotional
+% processes involved in recognising and responding to others
+% ~\cite{humphrey1976,salovey1990}. Difficulty interpreting changing social cues
+% can hinder behavioural adjustment; however, sensitivity to others can support
+% empathy, humour, positive emotional expression, and social connection. Fifth,
+% \textbf{Sustained-Effort Difficulty and Resilience} are associated with
+% conflict monitoring and behavioural regulation involving the anterior
+% cingulate cortex~\cite{garmezy1971,carter2007}. Prolonged cognitive control can
+% cause mental fatigue and reduce sustained effort; however, the same regulatory
+% processes can support coping, self-regulation, and behavioural adaptation
+% ~\cite{baumeister2000}. Finally, \textbf{Working-Memory Difficulty and
+% Transcendence} are associated with the processing of emotionally,
+% aesthetically, and personally salient experiences. Ordinary or low-salience
+% task information can be difficult to retain and retrieve; however, meaningful
+% experiences can promote deep absorption and stronger memory encoding
+% ~\cite{martinez2016,shiota2006}.
+
+% Together, these relationships form six ADHD strength--challenge pairings:
+% cognitive vitality-concentration, courage-emotion, energy-activation,
+% humanity-execution, resilience-effort, and transcendence-memory. These
+% pairings provide the conceptual basis for the six interaction modules
+% developed in Section~4.
 
 % \section{Interaction Design Principles}
 
@@ -343,7 +415,7 @@ Figures~\ref{fig:prototype} and~\ref{fig:phone}.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=\linewidth]{Phone.pdf}
+  \includegraphics[width=0.7\linewidth]{Phone.pdf}
   \Description{StrengthFlow displayed on a physical mobile device held in a real-world environment, illustrating in-context use during formative user testing.}
   \caption{StrengthFlow running on a mobile device during formative user testing.}
   \label{fig:phone}
@@ -351,19 +423,25 @@ Figures~\ref{fig:prototype} and~\ref{fig:phone}.
 
 \section{Formative User Testing}
 
-Formative testing was conducted with three adults with ADHD. Three adults with ADHD explored the prototype's task modules and provided qualitative feedback on its interaction and visual design through \textit{[INSERT ACTUAL FEEDBACK METHOD: e.g.\ think-aloud observation, semi-structured interview, written questionnaire]}. Participants described StrengthFlow as engaging and found that its colour palette attracted
-their attention. However, they also reported that environmental noise,
-particularly while commuting, could compete with the visually focused
-interaction. These findings are treated as formative indicators to inform
+Three adults with ADHD explored the prototype's task modules and provided
+qualitative feedback on its interaction and visual design through
+semi-structured interviews. Participants described StrengthFlow as engaging and found that its colour palette attracted their attention. However, they also reported that environmental noise, particularly while commuting, could compete with the visually focused interaction. These findings are treated as formative indicators to inform
 further design iteration rather than as evidence of effectiveness.
+
 
 
 
 \section{Conclusion}
 
-StrengthFlow demonstrates a strength-based approach to mobile task management for adults with ADHD. Rather than relying on reminders, timers, or behavioural correction, StrengthFlow positions each cognitive strength as a conceptual basis for an interaction module that addresses the corresponding executive challenge. The underlying design approach is replicable: identify a cognitive strength and its associated executive challenge in the literature, derive an abstract design principle from that pairing, and implement a concrete interaction that instantiates the principle without imposing deficit-oriented constraints.
+StrengthFlow demonstrates a neurodiversity-informed, strength-based approach
+to mobile task management for adults with ADHD. It translates six
+literature-informed strength--challenge pairings into design principles and interaction modules, using cognitive vitality, courage, energy, humanity,
+resilience, and transcendence as resources for supporting concentration,
+emotion, activation, execution, effort, and memory. Rather than relying
+primarily on reminders and behavioural correction, the design seeks to support
+task engagement, autonomy, and a more positive understanding of ADHD.
 
-This work has several limitations. The formative evaluation involved only three participants, limiting the extent to which findings can be generalised. Coverage of users with additional access needs, including those with deafblindness, remains limited. Future work will: evaluate the application with a larger and more diverse group of adults with ADHD; assess the six modules both separately and as an integrated system; explore optional, user-controlled audio support to address distraction in noisy environments without increasing sensory load; and improve inclusion of users with additional access needs. Beyond task management, StrengthFlow aims to support a shift in the mental model of ADHD from ``I need to be managed'' to one that affirms capability and positive identity.
+Limitations include the small formative sample and limited representation of users with additional access needs. Future work will evaluate the modules, individually and as an integrated system, with a larger and more diverse sample, and explore optional user-controlled audio without increasing sensory load.
 
 \begin{acks}
 The author thanks the three anonymous ADHD participants who provided user testing
