@@ -77,38 +77,33 @@ This paper presents StrengthFlow, a strength-based task management application f
 \maketitle
 
 \section{Introduction}
+ADHD is commonly understood through deficits in attention and executive function. For adults with ADHD, executive dysfunction is a central challenge\cite{nigg2005}, affecting the cognitive processes that support flexible, goal-directed behaviour and everyday task completion~\cite{miyake2000}. Which significantly affects the daily social activities of adults with ADHD. However, ADHD characteristics cannot
+be reduced to a binary distinction between ``normal'' and ``abnormal''~\cite{sedgwick2019}. Adults with ADHD may experience difficulties in cognitive control, reward sensitivity, and time perception, while also
+displaying creativity, high energy, hyperfocus, empathy, and a willingness to help others. These coexisting characteristics suggest that ADHD support should not only address difficulties, but also recognise and activate individual strengths\cite{sedgwick2019}. Yet few tools currently treat ADHD-related strengths as resources for supporting executive function.
 
-Behavioural characteristics of ADHD do not exist in a binary form of normal and
-abnormal~\cite{sedgwick2019}. A person with ADHD experiences deficits in
-cognitive control, sensitivity to rewards, and time perception, while
-simultaneously displaying high energy, creativity, hyperfocus, empathy, and
-willingness to help others. The core deficit is \textbf{executive dysfunction}
-\cite{nigg2005}---a broad range of top-down cognitive processes and abilities
-that enable flexible, goal-directed behaviour~\cite{miyake2000}---which
-significantly affects the daily social activities of adults with ADHD.
+Digital task-management applications are increasingly used as complementary psychosocial support for adults with ADHD, although evidence of their sustained effectiveness remains limited~\cite{pasarelu2020}. More importantly, many existing tools rely on reminders, monitoring, and external behavioural
+control. While these mechanisms may support task completion, they can also reinforce a deficit-oriented mental model in which users feel that 'I need to be managed', undermining self-esteem\cite{torous2016}~\cite{gajecki2014}.
 
-Current approaches to alleviating executive symptoms include traditional
-medications---whose global market continues to grow~\cite{scheffler2007}---and
-behavioural therapies; however, they cannot maintain long-term symptom relief
-and have severe limitations in terms of side effects~\cite{enriquez2019},
-making psychosocial interventions a necessary complement~\cite{safren2006}. One widely adapted psychosocial tool is the
-digital application. A systematic review of 355 app-related studies found that
-most effectiveness outcomes were negative~\cite{pasarelu2020}: poor outcomes
-were not maintained long after the intervention~\cite{gajecki2014}, and users
-reported more severe anxiety when separated from the tool~\cite{torous2016}.
-More critically, these control-oriented tools reinforce the negative mental
-model that ``I need to be managed,'' undermining self-esteem.
+This poster presents \textit{StrengthFlow}, a strength-oriented mobile task-management concept grounded in neurodiversity. It pairs the six dimensions of ADHD executive-function difficulty proposed by
+Brown\cite{nigg2005}, activation, concentration, effort, emotion, memory, and execution; with the six positive ADHD-related characteristics identified by Schippers et al.~\cite{sedgwick2019}, energy, cognitive vitality, resilience, courage, transcendence, and humanity~\cite{schippers2022}. StrengthFlow translates each pairing into an interactive task module. Rather than suppressing ADHD the deficit of people with ADHD, StrengthFlow recognises that their effects are context-dependent and explores how they can be redirected as resources for task engagement, user autonomy, and a more positive understanding of ADHD.
 
-Brown's model of ADHD executive functioning identifies six impairment
-dimensions---activation, concentration, effort, emotion, memory, and
-execution. A complementary qualitative study defines six positive core themes in
-ADHD: \textbf{cognitive vitality}, \textbf{courage}, \textbf{energy},
-\textbf{humanity}, \textbf{resilience}, and \textbf{transcendence}
-\cite{schippers2022}. StrengthFlow maps each cognitive strength to its
-corresponding executive challenge and implements an interaction module that
-activates the strength to support task engagement.
 
-\begin{table}[t]
+\section{User Needs and Gaps in Existing ADHD Tools}
+
+Approximately 2.8\% of adults worldwide have ADHD~\cite{faraone2006}. An
+analysis of two qualitative studies (422 adults with ADHD across six countries)
+showed that participants described their own strengths---problem-solving,
+fantasy, novelty-seeking, deep focus, empathy, resilience---yet received little
+external recognition of them. A review of 127 ADHD studies found that 29\% of
+treated and 56\% of untreated adults reported low self-esteem, and 38--73\%
+felt their social functioning was affected~\cite{harpin2016}. These findings
+point to two parallel needs: (1)~social recognition and affirmation of ADHD
+strengths; and (2)~support for executive skill and self-esteem through positive
+engagement rather than coercion.
+
+Existing digital tools have attempted to address these needs, but predominantly through a deficit-correction lens. We examined a prior systematic review of 22 representative ADHD management applications (10,000--50,000 downloads) covering task management, habit building, time management, focus enhancement, emotion regulation, and memory support~\cite{pasarelu2020}, and applied a supplementary strength-based analysis classifying each module by whether its interaction design leverages ADHD cognitive strengths. Table~\ref{tab:apps} presents the results. Most modules rely on mandatory reminders, countdown timers, and forced behavioural prompts, with no leverage of cognitive strengths. A subset---visual mapping, meditation, community interaction, and random creative prompts---does align with positive ADHD characteristics. However, no existing tool integrates these strength-aligned elements into a unified, theoretically grounded framework. This gap---between what users need (strength affirmation and positive engagement) and what current tools offer (deficit correction)---motivates the research presented here.
+
+\begin{table}[htbp]
 \centering
   \caption{ADHD application module analysis: dysfunction targeted, interaction
     type, and whether the module leverages ADHD cognitive strengths (adapted
@@ -132,21 +127,6 @@ activates the strength to support task engagement.
     \bottomrule
   \end{tabular}
 \end{table}
-
-\section{User Needs and Gaps in Existing ADHD Tools}
-
-Approximately 2.8\% of adults worldwide have ADHD~\cite{faraone2006}. An
-analysis of two qualitative studies (422 adults with ADHD across six countries)
-showed that participants described their own strengths---problem-solving,
-fantasy, novelty-seeking, deep focus, empathy, resilience---yet received little
-external recognition of them. A review of 127 ADHD studies found that 29\% of
-treated and 56\% of untreated adults reported low self-esteem, and 38--73\%
-felt their social functioning was affected~\cite{harpin2016}. These findings
-point to two parallel needs: (1)~social recognition and affirmation of ADHD
-strengths; and (2)~support for executive skill and self-esteem through positive
-engagement rather than coercion.
-
-Existing digital tools have attempted to address these needs, but predominantly through a deficit-correction lens. We examined a prior systematic review of 22 representative ADHD management applications (10,000--50,000 downloads) covering task management, habit building, time management, focus enhancement, emotion regulation, and memory support~\cite{pasarelu2020}, and applied a supplementary strength-based analysis classifying each module by whether its interaction design leverages ADHD cognitive strengths. Table~\ref{tab:apps} presents the results. Most modules rely on mandatory reminders, countdown timers, and forced behavioural prompts, with no leverage of cognitive strengths. A subset---visual mapping, meditation, community interaction, and random creative prompts---does align with positive ADHD characteristics. However, no existing tool integrates these strength-aligned elements into a unified, theoretically grounded framework. This gap---between what users need (strength affirmation and positive engagement) and what current tools offer (deficit correction)---motivates the research presented here.
 
 \section{Neurodiversity Framework: Strengths and Executive Challenges}
 
